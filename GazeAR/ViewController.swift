@@ -15,9 +15,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: Variables
     // 2D ELEMENTS
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var calibrationView: UIView!
     @IBOutlet weak var gazePosX: UILabel!
     @IBOutlet weak var gazePosY: UILabel!
     var gazeTarget : UIView = UIView()
+    var calibration : Calibration!
     
     // 3D ELEMENTS
     var virtualPhoneNode: SCNNode = SCNNode()
@@ -52,6 +54,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(gazeTracker)
         virtualPhoneNode.addChildNode(virtualScreenNode)
         sceneView.scene.rootNode.addChildNode(virtualPhoneNode)
+        
+        // Set up calibration
+        calibration = Calibration(gazeTracker: gazeTracker, calibrationView: calibrationView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +87,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
-        gazeTracker.transform = node.transform;
+        gazeTracker.transform = node.transform
         guard let coords: simd_float2 = gazeTracker.update(withFaceAnchor: faceAnchor, virtualPhoneNode: virtualPhoneNode) else { return }
         
         // Update the tracker and labels

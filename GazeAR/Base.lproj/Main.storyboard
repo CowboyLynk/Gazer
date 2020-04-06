@@ -91,20 +91,28 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPC-Zr-VEz">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="995"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="26N-k3-Kq7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3r7-y8-oL3"/>
+                            <constraint firstItem="gPC-Zr-VEz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="43l-Gs-Pr7"/>
                             <constraint firstItem="26N-k3-Kq7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ccl-E1-bfJ"/>
                             <constraint firstItem="FDF-qY-Cr0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CyY-GF-Mr8"/>
+                            <constraint firstItem="gPC-Zr-VEz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZSs-GV-ENF"/>
+                            <constraint firstItem="gPC-Zr-VEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bSp-xz-87K"/>
                             <constraint firstItem="FDF-qY-Cr0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cMd-0z-ggP"/>
                             <constraint firstItem="FDF-qY-Cr0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="77" id="dDR-eD-P8H"/>
                             <constraint firstItem="26N-k3-Kq7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i6E-pG-KjP"/>
+                            <constraint firstItem="FDF-qY-Cr0" firstAttribute="top" secondItem="gPC-Zr-VEz" secondAttribute="bottom" constant="-1" id="pV7-Y6-ZdW"/>
                             <constraint firstAttribute="bottom" secondItem="26N-k3-Kq7" secondAttribute="bottom" id="xis-Fl-Ck2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calibrationView" destination="gPC-Zr-VEz" id="eeM-YS-4si"/>
                         <outlet property="gazePosX" destination="sK3-S3-QSq" id="z54-6c-vLo"/>
                         <outlet property="gazePosY" destination="2Bf-xR-xj3" id="SzB-ra-K6R"/>
                         <outlet property="sceneView" destination="26N-k3-Kq7" id="imF-qF-Rwj"/>

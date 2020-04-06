@@ -15,7 +15,7 @@ class GazeTracker : SCNNode {
     let iPadPointSize = simd_float2(1668/2, 2388/2)
     let iPadMeterSize = simd_float2(0.16048181818181817, 0.22975454545454543)
     let offset = simd_float2(1668/4, 2388/4)
-    let floatRaycastDistance:Float = 2  // how far away in meters the gaze visualization should extend
+    let floatRaycastDistance:Float = 2  // How far away in meters the gaze visualization should extend
     let numPositions = 10 // How many positions to average over
     let hitTestOptions : [String: Any] = [SCNHitTestOption.backFaceCulling.rawValue: false,
                                    SCNHitTestOption.searchMode.rawValue: 1,
