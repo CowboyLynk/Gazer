@@ -52,6 +52,7 @@ class GazeTracker : SCNNode {
     }()
     var leftEyeEnd: SCNNode = SCNNode()
     var rightEyeEnd: SCNNode = SCNNode()
+    var coords = simd_float2(0, 0)
     
     // MARK: Initialization
     override init() {
@@ -86,7 +87,7 @@ class GazeTracker : SCNNode {
             options: hitTestOptions)
         
         if (hitTestLeftEye.count > 0 && hitTestRightEye.count > 0) {
-            let coords = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
+            coords = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
             return coords
         }
         return nil
