@@ -25,13 +25,33 @@ static Point2f convert(CGPoint point) {
     return Point2f(point.x, point.y);
 }
 
-static Mat convert(CGPoint arr[], int size) {
+static CGPoint convert(Point2f point) {
+    return {point.x, point.y};
+}
+
+//static Mat convert(Homography hom) {
+//    Mat matrix = Mat();
+//    matrix.push_back(convert(hom.m00));
+//    matrix.push_back(convert(hom.m01));
+//    matrix.push_back(convert(hom.m02));
+//
+//    matrix.push_back(convert(hom.m10));
+//    matrix.push_back(convert(hom.m11));
+//    matrix.push_back(convert(hom.m12));
+//
+//    matrix.push_back(convert(hom.m20));
+//    matrix.push_back(convert(hom.m21));
+//    matrix.push_back(convert(hom.m22));
+//
+//    return matrix;
+//}
+
+static Mat convert(const CGPoint points [], int size) {
     Mat matrix = Mat();
-    for (int i = 0; i < size; ++i) {
-        matrix.push_back(convert(arr[i]));
-    }
+    for (int i = 0; i < size; i++) matrix.push_back(convert(points[i]));
     return matrix;
 }
+
 
 static Mat convert(Quadrilateral quad) {
     Mat matrix = Mat();
@@ -42,7 +62,7 @@ static Mat convert(Quadrilateral quad) {
     return matrix;
 }
 
-static CATransform3D convert(Mat m) {
+static CATransform3D convertToCATrandform3D(Mat m) {
     CATransform3D transform = CATransform3DIdentity;
     transform.m11 = m.at<CGFloat>(0, 0);
     transform.m21 = m.at<CGFloat>(0, 1);
@@ -58,10 +78,43 @@ static CATransform3D convert(Mat m) {
     return transform;
 }
 
-@implementation OpenCVWrapper
-
-+ (CATransform3D)findHomographyFromQuadrilateral:(Quadrilateral)origin toQuadrilateral:(Quadrilateral)destination {
-    return convert(findHomography(convert(origin), convert(destination)));
+static Homography convertToHomography(Mat m) {
+    Homography homography = {
+        m.at<CGFloat>(0, 0),
+        m.at<CGFloat>(0, 1),
+        m.at<CGFloat>(0, 2),
+        
+        m.at<CGFloat>(1, 0),
+        m.at<CGFloat>(1, 1),
+        m.at<CGFloat>(1, 2),
+        
+        m.at<CGFloat>(2, 0),
+        m.at<CGFloat>(2, 1),
+        m.at<CGFloat>(2, 2)
+    };
+    return homography;
 }
 
+ static CGPoint applyHmography(Mat m, CGPoint p) {
+     return p;
+ }
+
+@implementation OpenCVWrapper
+
++ (CATransform3D)findHomographyFromQuadrilateral:(Quadrilateral)origin
+                                 toQuadrilateral:(Quadrilateral)destination {
+    return convertToCATrandform3D(findHomography(convert(origin), convert(destination)));
+}
+
++ (Homography)findHomographyFromPoints:(const CGPoint [])origin
+                              toPoints:(const CGPoint [])destination
+                         withNumPoints:(int)numPoints {
+    return convertToHomography(findHomography(convert(origin, numPoints), convert(destination, numPoints)));
+}
+
+// TODO: Fill in this function
++ (CGPoint)applyHomographyToPoint:(CGPoint)point
+                   withHomography:(Homography)homography {
+    return {0, 0};
+}
 @end

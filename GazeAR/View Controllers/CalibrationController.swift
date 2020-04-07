@@ -60,6 +60,8 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         
         // TODO: REMOVE THIS!!!!!
         let test = OpenCVPerformanceTest()
+        test.testFindHomographyPerformanceQuadrilateral()
+        print("--")
         test.testFindHomographyPerformance()
     }
     
