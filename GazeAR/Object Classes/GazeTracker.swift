@@ -88,7 +88,10 @@ class GazeTracker : SCNNode {
         
         if (hitTestLeftEye.count > 0 && hitTestRightEye.count > 0) {
             coords = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
-            return coords
+            let x = Float.maximum(Float.minimum(coords.x, iPadPointSize.x-1), 0)
+            let y = Float.maximum(Float.minimum(coords.y, iPadPointSize.y-1), 0)
+            let boundedCoords = simd_float2(x, y)
+            return boundedCoords
         }
         return nil
     }
@@ -97,11 +100,9 @@ class GazeTracker : SCNNode {
         // Get the local coordinates
         // TODO: This formula needs to be adjusted and calibrated
         let xLC = ((result1.localCoordinates.x + result2.localCoordinates.x) / 2.0)
-        var x = xLC / (iPadMeterSize.x / 2.0) * iPadPointSize.x + offset.x
+        let x = xLC / (iPadMeterSize.x / 2.0) * iPadPointSize.x + offset.x
         let yLC = -((result1.localCoordinates.y + result2.localCoordinates.y) / 2.0);
-        var y = yLC / (iPadMeterSize.y / 2.0) * iPadPointSize.y + offset.y
-        x = Float.maximum(Float.minimum(x, iPadPointSize.x-1), 0)
-        y = Float.maximum(Float.minimum(y, iPadPointSize.y-1), 0)
+        let y = yLC / (iPadMeterSize.y / 2.0) * iPadPointSize.y + offset.y
         
         // Smooth the values
         positions.append(simd_float2(x,y));

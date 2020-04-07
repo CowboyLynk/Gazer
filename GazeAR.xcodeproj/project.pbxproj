@@ -11,12 +11,13 @@
 		856CA6C52437781600A4C38C /* Homography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856CA6C42437781600A4C38C /* Homography.swift */; };
 		85755E9E24366D4C00F7BDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755E9D24366D4C00F7BDD1 /* AppDelegate.swift */; };
 		85755EA024366D4C00F7BDD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755E9F24366D4C00F7BDD1 /* SceneDelegate.swift */; };
-		85755EA224366D4C00F7BDD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EA124366D4C00F7BDD1 /* ViewController.swift */; };
+		85755EA224366D4C00F7BDD1 /* CalibrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EA124366D4C00F7BDD1 /* CalibrationController.swift */; };
 		85755EA524366D4C00F7BDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85755EA324366D4C00F7BDD1 /* Main.storyboard */; };
 		85755EA724366D4E00F7BDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85755EA624366D4E00F7BDD1 /* Assets.xcassets */; };
 		85755EAA24366D4E00F7BDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85755EA824366D4E00F7BDD1 /* LaunchScreen.storyboard */; };
 		85755EB524366D4E00F7BDD1 /* GazeARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EB424366D4E00F7BDD1 /* GazeARTests.swift */; };
 		85755EC024366D4E00F7BDD1 /* GazeARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EBF24366D4E00F7BDD1 /* GazeARUITests.swift */; };
+		85E9B2DD243CAE9A002AE366 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9B2DC243CAE9A002AE366 /* GameController.swift */; };
 		85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEEED72436ACCD0011E50F /* Calibration.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,7 @@
 		85755E9A24366D4C00F7BDD1 /* GazeAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GazeAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85755E9D24366D4C00F7BDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85755E9F24366D4C00F7BDD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85755EA124366D4C00F7BDD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85755EA124366D4C00F7BDD1 /* CalibrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationController.swift; sourceTree = "<group>"; };
 		85755EA424366D4C00F7BDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85755EA624366D4E00F7BDD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85755EA924366D4E00F7BDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		85755EBB24366D4E00F7BDD1 /* GazeARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GazeARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85755EBF24366D4E00F7BDD1 /* GazeARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazeARUITests.swift; sourceTree = "<group>"; };
 		85755EC124366D4E00F7BDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E9B2DC243CAE9A002AE366 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		85FEEED72436ACCD0011E50F /* Calibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,16 +107,14 @@
 		85755E9C24366D4C00F7BDD1 /* GazeAR */ = {
 			isa = PBXGroup;
 			children = (
+				85E9B2DF243CB1B3002AE366 /* Object Classes */,
+				85E9B2DE243CB188002AE366 /* View Controllers */,
 				85755E9D24366D4C00F7BDD1 /* AppDelegate.swift */,
-				85FEEED72436ACCD0011E50F /* Calibration.swift */,
 				85755E9F24366D4C00F7BDD1 /* SceneDelegate.swift */,
-				85755EA124366D4C00F7BDD1 /* ViewController.swift */,
 				85755EA324366D4C00F7BDD1 /* Main.storyboard */,
 				85755EA624366D4E00F7BDD1 /* Assets.xcassets */,
 				85755EA824366D4E00F7BDD1 /* LaunchScreen.storyboard */,
 				85755EAB24366D4E00F7BDD1 /* Info.plist */,
-				856A7FCC24367F6900FF9BAE /* GazeTracker.swift */,
-				856CA6C42437781600A4C38C /* Homography.swift */,
 			);
 			path = GazeAR;
 			sourceTree = "<group>";
@@ -135,6 +135,25 @@
 				85755EC124366D4E00F7BDD1 /* Info.plist */,
 			);
 			path = GazeARUITests;
+			sourceTree = "<group>";
+		};
+		85E9B2DE243CB188002AE366 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85755EA124366D4C00F7BDD1 /* CalibrationController.swift */,
+				85E9B2DC243CAE9A002AE366 /* GameController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		85E9B2DF243CB1B3002AE366 /* Object Classes */ = {
+			isa = PBXGroup;
+			children = (
+				856CA6C42437781600A4C38C /* Homography.swift */,
+				856A7FCC24367F6900FF9BAE /* GazeTracker.swift */,
+				85FEEED72436ACCD0011E50F /* Calibration.swift */,
+			);
+			path = "Object Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85755EA224366D4C00F7BDD1 /* ViewController.swift in Sources */,
+				85755EA224366D4C00F7BDD1 /* CalibrationController.swift in Sources */,
+				85E9B2DD243CAE9A002AE366 /* GameController.swift in Sources */,
 				85755E9E24366D4C00F7BDD1 /* AppDelegate.swift in Sources */,
 				85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */,
 				856CA6C52437781600A4C38C /* Homography.swift in Sources */,

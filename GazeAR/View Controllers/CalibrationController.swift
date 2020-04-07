@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalibrationController.swift
 //  GazeAR
 //
 //  Created by Cowboy Lynk on 4/2/20.
@@ -10,7 +10,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class CalibrationController: UIViewController, ARSCNViewDelegate {
     
     // MARK: Variables
     // 2D ELEMENTS
