@@ -57,6 +57,10 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         
         // Set up calibration
         calibration = Calibration(gazeTracker: gazeTracker, calibrationView: calibrationView)
+        
+        // TODO: REMOVE THIS!!!!!
+        let test = OpenCVPerformanceTest()
+        test.testFindHomographyPerformance()
     }
     
     override func viewWillAppear(_ animated: Bool) {
