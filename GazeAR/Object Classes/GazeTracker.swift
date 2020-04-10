@@ -10,10 +10,11 @@ import Foundation
 import ARKit
 import SceneKit
 
+let iPadPointSize = simd_float2(1668/2, 2388/2)
+let iPadMeterSize = simd_float2(0.16048181818181817, 0.22975454545454543)
+
 class GazeTracker : SCNNode {
     // MARK: Constants
-    let iPadPointSize = simd_float2(1668/2, 2388/2)
-    let iPadMeterSize = simd_float2(0.16048181818181817, 0.22975454545454543)
     let offset = simd_float2(1668/4, 2388/4)
     let floatRaycastDistance:Float = 2  // How far away in meters the gaze visualization should extend
     let numPositions = 10 // How many positions to average over
@@ -21,13 +22,14 @@ class GazeTracker : SCNNode {
                                    SCNHitTestOption.searchMode.rawValue: 1,
                                    SCNHitTestOption.ignoreChildNodes.rawValue : false,
                                    SCNHitTestOption.ignoreHiddenNodes.rawValue : false]
+    var homography : Homography?  // How points are altered after calibration
     
     // MARK: Variables
     var positions: Array<simd_float2> = Array()
     var leftEye: SCNNode = {
         let geometry = SCNCone(topRadius: 0.005, bottomRadius: 0.003, height: 0.2)
         geometry.radialSegmentCount = 20
-        geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        geometry.firstMaterial?.diffuse.contents = UIColor.systemBlue
         let node = SCNNode()
         node.geometry = geometry
         node.eulerAngles.x = -.pi / 2
@@ -40,7 +42,7 @@ class GazeTracker : SCNNode {
     var rightEye: SCNNode = {
         let geometry = SCNCone(topRadius: 0.005, bottomRadius: 0.003, height: 0.2)
         geometry.radialSegmentCount = 20
-        geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        geometry.firstMaterial?.diffuse.contents = UIColor.systemBlue
         let node = SCNNode()
         node.geometry = geometry
         node.eulerAngles.x = -.pi / 2
@@ -71,8 +73,27 @@ class GazeTracker : SCNNode {
         fatalError("\(#function) has not been implemented")
     }
     
-    // MARK: ARKit Updates
-    func update(withFaceAnchor anchor: ARFaceAnchor, virtualPhoneNode: SCNNode) -> simd_float2? {
+    // MARK: - Public Functions
+    
+    /**
+    Sets the homography matrix variable
+     */
+    func setHomography(homography: Homography?) {
+        self.homography = homography
+    }
+    
+    /**
+     Applies the homography matrix to @param point
+     */
+    func getTransformedPoint(point: CGPoint) -> CGPoint {
+        if (homography != nil) {
+            return OpenCVWrapper.applyHomography(to: point, with: homography!);
+        }
+        return point;
+    }
+    
+    // MARK: - ARKit Updates
+    func update(withFaceAnchor anchor: ARFaceAnchor, virtualPhoneNode: SCNNode) -> CGPoint? {
         leftEye.simdTransform = anchor.leftEyeTransform;
         rightEye.simdTransform = anchor.rightEyeTransform;
         
@@ -88,10 +109,7 @@ class GazeTracker : SCNNode {
         
         if (hitTestLeftEye.count > 0 && hitTestRightEye.count > 0) {
             coords = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
-            let x = Float.maximum(Float.minimum(coords.x, iPadPointSize.x-1), 0)
-            let y = Float.maximum(Float.minimum(coords.y, iPadPointSize.y-1), 0)
-            let boundedCoords = simd_float2(x, y)
-            return boundedCoords
+            return CGPoint(x: CGFloat(coords.x), y: CGFloat(coords.y))
         }
         return nil
     }

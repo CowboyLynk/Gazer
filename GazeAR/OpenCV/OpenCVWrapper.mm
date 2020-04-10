@@ -71,10 +71,9 @@ static Homography convertToHomography(Mat m) {
 + (Homography)findHomographyFromPoints:(const CGPoint [])origin
                               toPoints:(const CGPoint [])destination
                          withNumPoints:(int)numPoints {
-    return convertToHomography(findHomography(convert(origin, numPoints), convert(destination, numPoints)));
+    return convertToHomography(findHomography(convert(origin, numPoints), convert(destination, numPoints), RANSAC));
 }
 
-// TODO: Fill in this function
 + (CGPoint)applyHomographyToPoint:(CGPoint)point
                    withHomography:(Homography)homography {
     return applyHomography(homography, point);

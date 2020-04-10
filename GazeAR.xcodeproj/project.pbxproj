@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD1F2440F4EA007DA3C7 /* Utilities.swift */; };
+		8550BD2224410072007DA3C7 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD2124410072007DA3C7 /* CustomNavController.swift */; };
 		856A7FCD24367F6900FF9BAE /* GazeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A7FCC24367F6900FF9BAE /* GazeTracker.swift */; };
-		856CA6C52437781600A4C38C /* Homography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856CA6C42437781600A4C38C /* Homography.swift */; };
 		85755E9E24366D4C00F7BDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755E9D24366D4C00F7BDD1 /* AppDelegate.swift */; };
 		85755EA024366D4C00F7BDD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755E9F24366D4C00F7BDD1 /* SceneDelegate.swift */; };
 		85755EA224366D4C00F7BDD1 /* CalibrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EA124366D4C00F7BDD1 /* CalibrationController.swift */; };
@@ -48,8 +49,9 @@
 		4F00211C7C7D841ED503AB33 /* Pods-GazeAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR.release.xcconfig"; path = "Target Support Files/Pods-GazeAR/Pods-GazeAR.release.xcconfig"; sourceTree = "<group>"; };
 		791E955318912D44CD867A34 /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeARTests.debug.xcconfig"; path = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		851AD7CF243CE3960088CC48 /* GazeAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GazeAR-Bridging-Header.h"; sourceTree = "<group>"; };
+		8550BD1F2440F4EA007DA3C7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8550BD2124410072007DA3C7 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		856A7FCC24367F6900FF9BAE /* GazeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazeTracker.swift; sourceTree = "<group>"; };
-		856CA6C42437781600A4C38C /* Homography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homography.swift; sourceTree = "<group>"; };
 		85755E9A24366D4C00F7BDD1 /* GazeAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GazeAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85755E9D24366D4C00F7BDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85755E9F24366D4C00F7BDD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 		856C4C23243CD1AB00269728 /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
-				856CA6C42437781600A4C38C /* Homography.swift */,
 				858ACD2C243CD3850020D1A0 /* OpenCVWrapper.mm */,
 				858ACD2E243CD3970020D1A0 /* OpenCVWrapper.h */,
 				851AD7CF243CE3960088CC48 /* GazeAR-Bridging-Header.h */,
@@ -161,6 +162,7 @@
 				85755EA624366D4E00F7BDD1 /* Assets.xcassets */,
 				85755EA824366D4E00F7BDD1 /* LaunchScreen.storyboard */,
 				85755EAB24366D4E00F7BDD1 /* Info.plist */,
+				8550BD1F2440F4EA007DA3C7 /* Utilities.swift */,
 			);
 			path = GazeAR;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 			children = (
 				85755EA124366D4C00F7BDD1 /* CalibrationController.swift */,
 				85E9B2DC243CAE9A002AE366 /* GameController.swift */,
+				8550BD2124410072007DA3C7 /* CustomNavController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -416,12 +419,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85755EA224366D4C00F7BDD1 /* CalibrationController.swift in Sources */,
+				8550BD2224410072007DA3C7 /* CustomNavController.swift in Sources */,
 				85E9B2DD243CAE9A002AE366 /* GameController.swift in Sources */,
 				85755E9E24366D4C00F7BDD1 /* AppDelegate.swift in Sources */,
 				85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */,
-				856CA6C52437781600A4C38C /* Homography.swift in Sources */,
 				85755EA024366D4C00F7BDD1 /* SceneDelegate.swift in Sources */,
 				858ACD2D243CD3850020D1A0 /* OpenCVWrapper.mm in Sources */,
+				8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */,
 				856A7FCD24367F6900FF9BAE /* GazeTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
