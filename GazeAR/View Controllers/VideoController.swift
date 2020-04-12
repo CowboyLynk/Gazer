@@ -21,6 +21,7 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var voiceCommandWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var voiceRecognitionField: UITextField!
     var gazeTarget : UIView = UIView()
+    @IBOutlet weak var circleProgressIndicator: CircleView!
     @IBOutlet var videoPlayer: YouTubePlayerView!
     
     // 3D ELEMENTS

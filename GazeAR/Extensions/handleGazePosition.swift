@@ -37,7 +37,8 @@ extension VideoController {
         let touchedSpeechView = boundingRect.contains(boundedAdjustedGaze)
         let wasTouchingSpeechView = boundingRect.contains(gaze.coords)
         let sameAction = wasTouchingSpeechView == touchedSpeechView
-        let timeoutPassed = Date().timeIntervalSince(gaze.time) > gazeTimeout
+        let timeDelta = Date().timeIntervalSince(gaze.time)
+        let timeoutPassed = timeDelta > gazeTimeout
         if !sameAction && timeoutPassed {
             if touchedSpeechView {
                 handleStartSpeech()
@@ -50,6 +51,20 @@ extension VideoController {
         if sameAction || timeoutPassed {
             gaze.setCoords(newCoords: boundedAdjustedGaze)
         }
+        
+        var progress = 1.0
+        if !sameAction {
+            progress = timeDelta / gazeTimeout
+            if !touchedSpeechView {
+                progress = 1 - progress
+            }
+        } else {
+            if !touchedSpeechView {
+                progress = 0.0
+            }
+        }
+        circleProgressIndicator.updateCircle(progress: CGFloat(progress))
+        
     }
     
     func handleOnScreenGaze() {
@@ -112,7 +127,7 @@ extension VideoController: SFSpeechRecognizerDelegate {
                     lastString = String(bestString[indexTo...])
                 }
                 self.voiceRecognitionField.text = bestString
-                self.checkForCommands(resultString: lastString)
+                self.checkForCommands(fullString: bestString, lastString: lastString)
             } else if let error = error {
                 print(error)
             }

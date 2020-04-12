@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6E69D2238377C3A8FFB919B1 /* Pods_GazeAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */; };
+		8506AC7D2443B9A3008B219A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506AC7C2443B9A3008B219A /* CircleView.swift */; };
 		853EEBE4244270F9003D2E98 /* handleGazePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EEBE3244270F9003D2E98 /* handleGazePosition.swift */; };
 		8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD1F2440F4EA007DA3C7 /* Utilities.swift */; };
 		8550BD2224410072007DA3C7 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD2124410072007DA3C7 /* CustomNavController.swift */; };
@@ -51,6 +52,7 @@
 		325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GazeAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F00211C7C7D841ED503AB33 /* Pods-GazeAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR.release.xcconfig"; path = "Target Support Files/Pods-GazeAR/Pods-GazeAR.release.xcconfig"; sourceTree = "<group>"; };
 		791E955318912D44CD867A34 /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeARTests.debug.xcconfig"; path = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8506AC7C2443B9A3008B219A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		851AD7CF243CE3960088CC48 /* GazeAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GazeAR-Bridging-Header.h"; sourceTree = "<group>"; };
 		853EEBE3244270F9003D2E98 /* handleGazePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handleGazePosition.swift; sourceTree = "<group>"; };
 		8550BD1F2440F4EA007DA3C7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				856A7FCC24367F6900FF9BAE /* GazeTracker.swift */,
+				8506AC7C2443B9A3008B219A /* CircleView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				853EEBE4244270F9003D2E98 /* handleGazePosition.swift in Sources */,
 				85755E9E24366D4C00F7BDD1 /* AppDelegate.swift in Sources */,
 				85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */,
+				8506AC7D2443B9A3008B219A /* CircleView.swift in Sources */,
 				85755EA024366D4C00F7BDD1 /* SceneDelegate.swift in Sources */,
 				858ACD2D243CD3850020D1A0 /* OpenCVWrapper.mm in Sources */,
 				8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */,
