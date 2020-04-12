@@ -63,6 +63,7 @@ extension VideoController {
     }
     
     func handleStartSpeech() {
+        videoPlayer.pause()
         voiceRecognitionField.text = ""
         recordAndRecognizeSpeech()
         animateSpeechCommandView(toWidth: speechIconSizeEnabled)
@@ -128,8 +129,15 @@ extension VideoController: SFSpeechRecognizerDelegate {
         audioEngine.inputNode.removeTap(onBus: 0)
     }
     
-    func checkForCommands(resultString: String) {
-        
+    func checkForCommands(fullString: String, lastString: String) {
+        let lowercaseLastString = lastString.lowercased()
+        switch lowercaseLastString {
+        case "start", "play", "resume":
+            videoPlayer.play()
+        case "stop", "pause", "end":
+            videoPlayer.pause()
+        default: break
+        }
     }
     
     func sendAlert(title: String, message: String) {

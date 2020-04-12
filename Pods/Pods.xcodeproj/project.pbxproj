@@ -19,219 +19,344 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		40259D90E260FECCA42F3A1689E6FC1E /* Pods-GazeAR-GazeARUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D2C3D95B3D8C755CD5E0D06BEC824 /* Pods-GazeAR-GazeARUITests-dummy.m */; };
-		B1381A1F019E4625EF2CC040F8459BEA /* Pods-GazeAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AD471098A44BEEF2430F4FC461E5B /* Pods-GazeAR-dummy.m */; };
-		E3CF50CD32C4DAFE82D90A55EA7A9D85 /* Pods-GazeARTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8719986D13B3509909E81C8F8A306E /* Pods-GazeARTests-dummy.m */; };
+		0C2D63747862DC6FD241FA51EAC19FCE /* Pods-GazeARTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E5CFE751E9EB557BC09516FD4858DB /* Pods-GazeARTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20F1922EAF253F394C67E286CFBE375C /* Pods-GazeAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF8858969D0BA9AF12903154DF21E /* Pods-GazeAR-dummy.m */; };
+		2869844D37C1BBF0E941A295934D0DFF /* Pods-GazeAR-GazeARUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1173D698B6A7776A1470B34BE6CB15F /* Pods-GazeAR-GazeARUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4F3F664D03DBAB764F4A169C38963B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6BD5F897603E8539A55A61398D39BDA7 /* YouTubePlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3FA4EBE4CE5B6C84A38D5B565D74E86 /* YouTubePlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7485FAF35AFDE4B1FFF68CFC3B138925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		790C65F54FFC5E07EEB2D95A7F3B1AB1 /* Pods-GazeARTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ED34FCE65EEBDCBD1816F31D932E4E /* Pods-GazeARTests-dummy.m */; };
+		9B55BD9201752AF7439D7F8BFBE31FF0 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1EBE6020E1E1C0E52E3BAF03EC8F5 /* YouTubePlayer.swift */; };
+		A75DEDE436B4F57A22A59438E2EA6A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C25B78F3F00AFB245C90F082734744FA /* YouTubePlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BBD5EDB5A0B97773738104EA1ECF8F /* YouTubePlayer-dummy.m */; };
+		CC895FE490310FAB208D48846ADC5FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CCCCB53543A08845ED5CD43754767CCB /* Pods-GazeAR-GazeARUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 499969AC6BF7A4BCEF809809232C34F9 /* Pods-GazeAR-GazeARUITests-dummy.m */; };
+		D1FD9D1ED13C185E7FF041E512B7AFE8 /* Pods-GazeAR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AE06D65A9B4D76CB767859032FB196 /* Pods-GazeAR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9364E2D8EAB205C8D348410F403A0F6 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A81D6B225E7AF6A78E2671940F70EB1 /* YTPlayer.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C5CA34AC4A09297588A555FB4077B9E /* PBXContainerItemProxy */ = {
+		1D803DBFBDF787F70185B7C247E875F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C80449F84CF910DF6AD6AFDDE039F2A;
 			remoteInfo = OpenCV;
 		};
-		20F4742E9578C9733FADB81EC94E43A7 /* PBXContainerItemProxy */ = {
+		266E495DCD3DA33E27C0CA83007B03C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C80449F84CF910DF6AD6AFDDE039F2A;
+			remoteInfo = OpenCV;
+		};
+		4E1FB61DD2F1396046978542913E28B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6273C43DC7FF94E93DBFF580DB584296;
+			remoteInfo = YouTubePlayer;
+		};
+		83E6BEA36CF9EBB32FFCCF44F7302929 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9877C1E70034F7B3D85776410AA3CC99;
 			remoteInfo = "Pods-GazeAR";
 		};
-		FD0C8D56C8153D39940DC3B4BA6E39AE /* PBXContainerItemProxy */ = {
+		E60EA7CD1E13C0BAF294F6E6CBAB5076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C80449F84CF910DF6AD6AFDDE039F2A;
-			remoteInfo = OpenCV;
+			remoteGlobalIDString = 6273C43DC7FF94E93DBFF580DB584296;
+			remoteInfo = YouTubePlayer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0497D520340F98CEF9FC92A7B6EDBF5D /* OpenCV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenCV.release.xcconfig; sourceTree = "<group>"; };
-		06C2D769CD64FE09DCEFA8190B9F3DE3 /* Pods-GazeARTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeARTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		273439E95AABB0E20E35122CCBCDE9BC /* Pods-GazeAR-GazeARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR-GazeARUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		29AED6A4E3DB579366496F431A548A9A /* Pods-GazeARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeARTests.release.xcconfig"; sourceTree = "<group>"; };
-		37449C47D922C90F6CB752C4D9CD6ADC /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
-		447AD471098A44BEEF2430F4FC461E5B /* Pods-GazeAR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeAR-dummy.m"; sourceTree = "<group>"; };
-		50DCF2EAE9F69B2E813BCD5ABE88444F /* Pods-GazeAR-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeAR-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5EEE43F69638BE6C8E84B3D1F9D179EB /* libPods-GazeAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GazeAR.a"; path = "libPods-GazeAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		675D2C3D95B3D8C755CD5E0D06BEC824 /* Pods-GazeAR-GazeARUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeAR-GazeARUITests-dummy.m"; sourceTree = "<group>"; };
-		6781FE78F6DA817F1D9394AA215252C7 /* libPods-GazeARTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GazeARTests.a"; path = "libPods-GazeARTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78019D5081C829E22C45ADE41AB348F0 /* Pods-GazeAR-GazeARUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeAR-GazeARUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0300E0CFEC2E6D11B340A27D1236977A /* Pods-GazeAR-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeAR-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0B35D535E55E73E7BB5BE0CD2EB8BA9E /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EA17692705D85BAAFE3D6007D3A03F2 /* Pods-GazeAR-GazeARUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-GazeARUITests-Info.plist"; sourceTree = "<group>"; };
+		10D5D644BFF777B8558C462204D0725C /* Pods-GazeAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR.debug.xcconfig"; sourceTree = "<group>"; };
+		1153ED7E9F7AC1A0C5FD0CE934FD0AA4 /* Pods-GazeAR-GazeARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR-GazeARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1330DAEF57B58A245F26F426A2951294 /* Pods-GazeAR-GazeARUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GazeAR-GazeARUITests.modulemap"; sourceTree = "<group>"; };
+		1CE1EBE6020E1E1C0E52E3BAF03EC8F5 /* YouTubePlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YouTubePlayer.swift; path = YouTubePlayer/YouTubePlayer/YouTubePlayer.swift; sourceTree = "<group>"; };
+		1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YouTubePlayer.framework; path = YouTubePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		240C8038BB2A50D0263C00984429B4E2 /* Pods-GazeAR-GazeARUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GazeAR-GazeARUITests-frameworks.sh"; sourceTree = "<group>"; };
+		29ED34FCE65EEBDCBD1816F31D932E4E /* Pods-GazeARTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeARTests-dummy.m"; sourceTree = "<group>"; };
+		2A81D6B225E7AF6A78E2671940F70EB1 /* YTPlayer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = YTPlayer.html; path = YouTubePlayer/YouTubePlayer/YTPlayer.html; sourceTree = "<group>"; };
+		2F99BA339670B229B3F9FB0307BBAE0E /* Pods-GazeAR-GazeARUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeAR-GazeARUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32AE06D65A9B4D76CB767859032FB196 /* Pods-GazeAR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GazeAR-umbrella.h"; sourceTree = "<group>"; };
+		39BBD5EDB5A0B97773738104EA1ECF8F /* YouTubePlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YouTubePlayer-dummy.m"; sourceTree = "<group>"; };
+		3D1EF274DE12C7223621C358F7A64F87 /* Pods-GazeAR-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-acknowledgements.plist"; sourceTree = "<group>"; };
+		3F7E7A6FEBE4F87ADD0705FFD96AC3DF /* OpenCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenCV.debug.xcconfig; sourceTree = "<group>"; };
+		499969AC6BF7A4BCEF809809232C34F9 /* Pods-GazeAR-GazeARUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeAR-GazeARUITests-dummy.m"; sourceTree = "<group>"; };
+		559F939A7754FD82F4B92E7E23068D90 /* Pods-GazeAR-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GazeAR-frameworks.sh"; sourceTree = "<group>"; };
+		5EEE43F69638BE6C8E84B3D1F9D179EB /* Pods_GazeAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GazeAR.framework; path = "Pods-GazeAR.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6275EC16E53D7CC4BD3ADBF87DB6AB73 /* YouTubePlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YouTubePlayer.modulemap; sourceTree = "<group>"; };
+		65A0CD2AFF3E203B31943F36C9722B6D /* Pods-GazeAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR.release.xcconfig"; sourceTree = "<group>"; };
+		6781FE78F6DA817F1D9394AA215252C7 /* Pods_GazeARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GazeARTests.framework; path = "Pods-GazeARTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E586926191DFCAE5C8C6CD3C9F7B782 /* Pods-GazeARTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeARTests-Info.plist"; sourceTree = "<group>"; };
+		702F67BEC8391CAF3CDE502C0B76D129 /* Pods-GazeARTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GazeARTests.modulemap"; sourceTree = "<group>"; };
+		70D80EF8F0AF6CF010CC5B25D629CC39 /* YouTubePlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YouTubePlayer-Info.plist"; sourceTree = "<group>"; };
+		86E5CFE751E9EB557BC09516FD4858DB /* Pods-GazeARTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GazeARTests-umbrella.h"; sourceTree = "<group>"; };
+		95AE7896651C093318B1E1DC63223A02 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		9D2C21BCF454ABD3A768FCE65F7EAB0E /* YouTubePlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YouTubePlayer-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F16843E339CBB1F8191EF1F7765A229 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		AA0BB91CD5671174FC6B4E2C553790EE /* Pods-GazeAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR.release.xcconfig"; sourceTree = "<group>"; };
-		ACA06B8605F3C80A43172FBEDEAF721B /* Pods-GazeAR-GazeARUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-GazeARUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BADF86D3383FE2D6C50DD72440C00AD8 /* Pods-GazeARTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeARTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF1A123C0FB9442AF74F2A9EBA2AF552 /* Pods-GazeAR-GazeARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR-GazeARUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CB8719986D13B3509909E81C8F8A306E /* Pods-GazeARTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeARTests-dummy.m"; sourceTree = "<group>"; };
-		D4699361BF45BFC473DF687131E82D63 /* Pods-GazeAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR.debug.xcconfig"; sourceTree = "<group>"; };
-		DF4D9F4A75C310464BB62D467636764C /* Pods-GazeAR-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-acknowledgements.plist"; sourceTree = "<group>"; };
-		E7B8ADC8A639C1D701D8D300A3BB37EC /* libPods-GazeAR-GazeARUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GazeAR-GazeARUITests.a"; path = "libPods-GazeAR-GazeARUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCBFA6EC75FE4D00166E6BE914B3AB7F /* OpenCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenCV.debug.xcconfig; sourceTree = "<group>"; };
+		A09E4C747F95053B86F58A87798C362E /* YouTubePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YouTubePlayer.release.xcconfig; sourceTree = "<group>"; };
+		A0E4035E5E78362F8588C7EF96A3F411 /* Pods-GazeARTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GazeARTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A3FA4EBE4CE5B6C84A38D5B565D74E86 /* YouTubePlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YouTubePlayer-umbrella.h"; sourceTree = "<group>"; };
+		A45902F3D20002C94E1AE2EE074AB2C3 /* YouTubePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YouTubePlayer.debug.xcconfig; sourceTree = "<group>"; };
+		A5BE3653EA2EB45C87607AFC75AC39AE /* Pods-GazeAR-GazeARUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-GazeARUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5FEF8858969D0BA9AF12903154DF21E /* Pods-GazeAR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GazeAR-dummy.m"; sourceTree = "<group>"; };
+		B1173D698B6A7776A1470B34BE6CB15F /* Pods-GazeAR-GazeARUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GazeAR-GazeARUITests-umbrella.h"; sourceTree = "<group>"; };
+		BC7F400B293E8AD1F06233DA48AB146B /* Pods-GazeAR-GazeARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeAR-GazeARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE53CED9223F7C30C40BED2706F9ACD5 /* OpenCV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenCV.release.xcconfig; sourceTree = "<group>"; };
+		BF2F47DF473438E0CE361B5C916FA3CC /* Pods-GazeARTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeARTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C7450F991314E0B046EA34304E5179C6 /* Pods-GazeAR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GazeAR-Info.plist"; sourceTree = "<group>"; };
+		E7B8ADC8A639C1D701D8D300A3BB37EC /* Pods_GazeAR_GazeARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GazeAR_GazeARUITests.framework; path = "Pods-GazeAR-GazeARUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C562FCEEA34F6C4AACED44E086E28B /* Pods-GazeARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GazeARTests.release.xcconfig"; sourceTree = "<group>"; };
+		FAFA9B2AB68AC1D27FA15EE5C8D2161F /* Pods-GazeAR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GazeAR.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47C8453862FEE200EC572F909AC17A9D /* Frameworks */ = {
+		96784CFA1F2C240FF672D1838303E7F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75DEDE436B4F57A22A59438E2EA6A0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F8ED50899DF5B3DB559BCC05E841474 /* Frameworks */ = {
+		C6CB98D76DFA5B2F1AB314D90B22E6FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7485FAF35AFDE4B1FFF68CFC3B138925 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74F3C3F513AFC7B0563A1069D591A933 /* Frameworks */ = {
+		F06994B1868CDD3F77F67B62C32066AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC895FE490310FAB208D48846ADC5FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36232D840C1BBF7ACF1937489915AA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4F3F664D03DBAB764F4A169C38963B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38A426BE59B4C4900500FFCFF87B440E /* Pods-GazeAR-GazeARUITests */ = {
+		17E30D4ACF9657F954791B8ACF76DB3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78019D5081C829E22C45ADE41AB348F0 /* Pods-GazeAR-GazeARUITests-acknowledgements.markdown */,
-				ACA06B8605F3C80A43172FBEDEAF721B /* Pods-GazeAR-GazeARUITests-acknowledgements.plist */,
-				675D2C3D95B3D8C755CD5E0D06BEC824 /* Pods-GazeAR-GazeARUITests-dummy.m */,
-				273439E95AABB0E20E35122CCBCDE9BC /* Pods-GazeAR-GazeARUITests.debug.xcconfig */,
-				BF1A123C0FB9442AF74F2A9EBA2AF552 /* Pods-GazeAR-GazeARUITests.release.xcconfig */,
+				5EEE43F69638BE6C8E84B3D1F9D179EB /* Pods_GazeAR.framework */,
+				E7B8ADC8A639C1D701D8D300A3BB37EC /* Pods_GazeAR_GazeARUITests.framework */,
+				6781FE78F6DA817F1D9394AA215252C7 /* Pods_GazeARTests.framework */,
+				1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer.framework */,
 			);
-			name = "Pods-GazeAR-GazeARUITests";
-			path = "Target Support Files/Pods-GazeAR-GazeARUITests";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		3AF9679C862192C2C387E4297B44F12C /* Frameworks */ = {
+		1E1C2FE515B4A191E5393BD529DE4E0A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9F16843E339CBB1F8191EF1F7765A229 /* opencv2.framework */,
+				6275EC16E53D7CC4BD3ADBF87DB6AB73 /* YouTubePlayer.modulemap */,
+				39BBD5EDB5A0B97773738104EA1ECF8F /* YouTubePlayer-dummy.m */,
+				70D80EF8F0AF6CF010CC5B25D629CC39 /* YouTubePlayer-Info.plist */,
+				9D2C21BCF454ABD3A768FCE65F7EAB0E /* YouTubePlayer-prefix.pch */,
+				A3FA4EBE4CE5B6C84A38D5B565D74E86 /* YouTubePlayer-umbrella.h */,
+				A45902F3D20002C94E1AE2EE074AB2C3 /* YouTubePlayer.debug.xcconfig */,
+				A09E4C747F95053B86F58A87798C362E /* YouTubePlayer.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/YouTubePlayer";
 			sourceTree = "<group>";
 		};
-		50D6A6B87863C2CCB4D4CA1CA070AA61 /* Pods-GazeAR */ = {
+		3ABE864C1CEEF6FB7C617722413BDDBA /* Pods-GazeAR */ = {
 			isa = PBXGroup;
 			children = (
-				50DCF2EAE9F69B2E813BCD5ABE88444F /* Pods-GazeAR-acknowledgements.markdown */,
-				DF4D9F4A75C310464BB62D467636764C /* Pods-GazeAR-acknowledgements.plist */,
-				447AD471098A44BEEF2430F4FC461E5B /* Pods-GazeAR-dummy.m */,
-				D4699361BF45BFC473DF687131E82D63 /* Pods-GazeAR.debug.xcconfig */,
-				AA0BB91CD5671174FC6B4E2C553790EE /* Pods-GazeAR.release.xcconfig */,
+				FAFA9B2AB68AC1D27FA15EE5C8D2161F /* Pods-GazeAR.modulemap */,
+				0300E0CFEC2E6D11B340A27D1236977A /* Pods-GazeAR-acknowledgements.markdown */,
+				3D1EF274DE12C7223621C358F7A64F87 /* Pods-GazeAR-acknowledgements.plist */,
+				A5FEF8858969D0BA9AF12903154DF21E /* Pods-GazeAR-dummy.m */,
+				559F939A7754FD82F4B92E7E23068D90 /* Pods-GazeAR-frameworks.sh */,
+				C7450F991314E0B046EA34304E5179C6 /* Pods-GazeAR-Info.plist */,
+				32AE06D65A9B4D76CB767859032FB196 /* Pods-GazeAR-umbrella.h */,
+				10D5D644BFF777B8558C462204D0725C /* Pods-GazeAR.debug.xcconfig */,
+				65A0CD2AFF3E203B31943F36C9722B6D /* Pods-GazeAR.release.xcconfig */,
 			);
 			name = "Pods-GazeAR";
 			path = "Target Support Files/Pods-GazeAR";
 			sourceTree = "<group>";
 		};
-		5AA1A74F89BC7C0C44403119DCA94123 /* Products */ = {
+		52580B6D7EFCAA25702C0AA9BCE6E8BF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EEE43F69638BE6C8E84B3D1F9D179EB /* libPods-GazeAR.a */,
-				E7B8ADC8A639C1D701D8D300A3BB37EC /* libPods-GazeAR-GazeARUITests.a */,
-				6781FE78F6DA817F1D9394AA215252C7 /* libPods-GazeARTests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6A963D0093A9BF42B5DA95395D8131CC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FCBFA6EC75FE4D00166E6BE914B3AB7F /* OpenCV.debug.xcconfig */,
-				0497D520340F98CEF9FC92A7B6EDBF5D /* OpenCV.release.xcconfig */,
+				3F7E7A6FEBE4F87ADD0705FFD96AC3DF /* OpenCV.debug.xcconfig */,
+				BE53CED9223F7C30C40BED2706F9ACD5 /* OpenCV.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/OpenCV";
 			sourceTree = "<group>";
 		};
-		838C2CF6101E4E81D6159B2B4E4BEEB5 /* Pods-GazeARTests */ = {
+		6780EE2FB494565BF08B16B85E82E120 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BADF86D3383FE2D6C50DD72440C00AD8 /* Pods-GazeARTests-acknowledgements.markdown */,
-				06C2D769CD64FE09DCEFA8190B9F3DE3 /* Pods-GazeARTests-acknowledgements.plist */,
-				CB8719986D13B3509909E81C8F8A306E /* Pods-GazeARTests-dummy.m */,
-				37449C47D922C90F6CB752C4D9CD6ADC /* Pods-GazeARTests.debug.xcconfig */,
-				29AED6A4E3DB579366496F431A548A9A /* Pods-GazeARTests.release.xcconfig */,
+				3ABE864C1CEEF6FB7C617722413BDDBA /* Pods-GazeAR */,
+				F1D5EFE71D271D87629DFEBBAF179109 /* Pods-GazeAR-GazeARUITests */,
+				C2A499077596CC1E209DFF520B8C4D6C /* Pods-GazeARTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9A77C87B54A9ED248EAF9558068021C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95AE7896651C093318B1E1DC63223A02 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4DDC14A3A3AEEFE7D609FC458F22511 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A81D6B225E7AF6A78E2671940F70EB1 /* YTPlayer.html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C2A499077596CC1E209DFF520B8C4D6C /* Pods-GazeARTests */ = {
+			isa = PBXGroup;
+			children = (
+				702F67BEC8391CAF3CDE502C0B76D129 /* Pods-GazeARTests.modulemap */,
+				A0E4035E5E78362F8588C7EF96A3F411 /* Pods-GazeARTests-acknowledgements.markdown */,
+				BF2F47DF473438E0CE361B5C916FA3CC /* Pods-GazeARTests-acknowledgements.plist */,
+				29ED34FCE65EEBDCBD1816F31D932E4E /* Pods-GazeARTests-dummy.m */,
+				6E586926191DFCAE5C8C6CD3C9F7B782 /* Pods-GazeARTests-Info.plist */,
+				86E5CFE751E9EB557BC09516FD4858DB /* Pods-GazeARTests-umbrella.h */,
+				0B35D535E55E73E7BB5BE0CD2EB8BA9E /* Pods-GazeARTests.debug.xcconfig */,
+				F2C562FCEEA34F6C4AACED44E086E28B /* Pods-GazeARTests.release.xcconfig */,
 			);
 			name = "Pods-GazeARTests";
 			path = "Target Support Files/Pods-GazeARTests";
 			sourceTree = "<group>";
 		};
-		BC59FE1BFB88717A5BBCFDA77EDDA0A7 /* Targets Support Files */ = {
+		C9371EA108350002E686FA0AE179A81A /* YouTubePlayer */ = {
 			isa = PBXGroup;
 			children = (
-				50D6A6B87863C2CCB4D4CA1CA070AA61 /* Pods-GazeAR */,
-				38A426BE59B4C4900500FFCFF87B440E /* Pods-GazeAR-GazeARUITests */,
-				838C2CF6101E4E81D6159B2B4E4BEEB5 /* Pods-GazeARTests */,
+				1CE1EBE6020E1E1C0E52E3BAF03EC8F5 /* YouTubePlayer.swift */,
+				B4DDC14A3A3AEEFE7D609FC458F22511 /* Resources */,
+				1E1C2FE515B4A191E5393BD529DE4E0A /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = YouTubePlayer;
+			path = YouTubePlayer;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				CFD032C4A1C123B6A951E0DA40802F05 /* Pods */,
-				5AA1A74F89BC7C0C44403119DCA94123 /* Products */,
-				BC59FE1BFB88717A5BBCFDA77EDDA0A7 /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				EA6DD9973273AA1A63BF9DBA7DB1C333 /* Pods */,
+				17E30D4ACF9657F954791B8ACF76DB3D /* Products */,
+				6780EE2FB494565BF08B16B85E82E120 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		CFD032C4A1C123B6A951E0DA40802F05 /* Pods */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F1DAF6FD64F22E7EC2F784762D34E1EE /* OpenCV */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F1DAF6FD64F22E7EC2F784762D34E1EE /* OpenCV */ = {
+		DC02CF103B1B59442A06E6E16ECC1109 /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
-				3AF9679C862192C2C387E4297B44F12C /* Frameworks */,
-				6A963D0093A9BF42B5DA95395D8131CC /* Support Files */,
+				9A77C87B54A9ED248EAF9558068021C1 /* Frameworks */,
+				52580B6D7EFCAA25702C0AA9BCE6E8BF /* Support Files */,
 			);
 			name = OpenCV;
 			path = OpenCV;
 			sourceTree = "<group>";
 		};
+		EA6DD9973273AA1A63BF9DBA7DB1C333 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC02CF103B1B59442A06E6E16ECC1109 /* OpenCV */,
+				C9371EA108350002E686FA0AE179A81A /* YouTubePlayer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1D5EFE71D271D87629DFEBBAF179109 /* Pods-GazeAR-GazeARUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1330DAEF57B58A245F26F426A2951294 /* Pods-GazeAR-GazeARUITests.modulemap */,
+				2F99BA339670B229B3F9FB0307BBAE0E /* Pods-GazeAR-GazeARUITests-acknowledgements.markdown */,
+				A5BE3653EA2EB45C87607AFC75AC39AE /* Pods-GazeAR-GazeARUITests-acknowledgements.plist */,
+				499969AC6BF7A4BCEF809809232C34F9 /* Pods-GazeAR-GazeARUITests-dummy.m */,
+				240C8038BB2A50D0263C00984429B4E2 /* Pods-GazeAR-GazeARUITests-frameworks.sh */,
+				0EA17692705D85BAAFE3D6007D3A03F2 /* Pods-GazeAR-GazeARUITests-Info.plist */,
+				B1173D698B6A7776A1470B34BE6CB15F /* Pods-GazeAR-GazeARUITests-umbrella.h */,
+				1153ED7E9F7AC1A0C5FD0CE934FD0AA4 /* Pods-GazeAR-GazeARUITests.debug.xcconfig */,
+				BC7F400B293E8AD1F06233DA48AB146B /* Pods-GazeAR-GazeARUITests.release.xcconfig */,
+			);
+			name = "Pods-GazeAR-GazeARUITests";
+			path = "Target Support Files/Pods-GazeAR-GazeARUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9F656EA46C3AF07BECC2B278CCF08F4D /* Headers */ = {
+		6271DC5F02BA6C9C36ACF5504041FEEB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2869844D37C1BBF0E941A295934D0DFF /* Pods-GazeAR-GazeARUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3A1FD64DB49912B5445F980E7625CF6 /* Headers */ = {
+		A438F8E986B9A03604B7C7627A3EDEA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2D63747862DC6FD241FA51EAC19FCE /* Pods-GazeARTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC563F7C61114DA33699877C8E1C6DD6 /* Headers */ = {
+		A5A99155285602D9AD356D3D76847E45 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD5F897603E8539A55A61398D39BDA7 /* YouTubePlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAE3F7E0CE0E4D047167BC62DA30113 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1FD9D1ED13C185E7FF041E512B7AFE8 /* Pods-GazeAR-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,57 +365,80 @@
 /* Begin PBXNativeTarget section */
 		31A4144863239E655B0717B680850FC0 /* Pods-GazeARTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3374BCB11550316E0FEA2022848854A9 /* Build configuration list for PBXNativeTarget "Pods-GazeARTests" */;
+			buildConfigurationList = 0F07A5B4373BE3F0FB6ED3D68C6BA1CD /* Build configuration list for PBXNativeTarget "Pods-GazeARTests" */;
 			buildPhases = (
-				EC563F7C61114DA33699877C8E1C6DD6 /* Headers */,
-				33C75830B929249541A1487F339261D1 /* Sources */,
-				47C8453862FEE200EC572F909AC17A9D /* Frameworks */,
+				A438F8E986B9A03604B7C7627A3EDEA9 /* Headers */,
+				2BD59DA39ABA9A2D757BB98E8262F0CB /* Sources */,
+				C6CB98D76DFA5B2F1AB314D90B22E6FB /* Frameworks */,
+				0936A0A1103DF65517BBC7AC5C649987 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A694D260BC7E338E9E43C5D3F0D38420 /* PBXTargetDependency */,
+				FB8E745346D6055EF8F9289208525AD8 /* PBXTargetDependency */,
 			);
 			name = "Pods-GazeARTests";
 			productName = "Pods-GazeARTests";
-			productReference = 6781FE78F6DA817F1D9394AA215252C7 /* libPods-GazeARTests.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 6781FE78F6DA817F1D9394AA215252C7 /* Pods_GazeARTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6273C43DC7FF94E93DBFF580DB584296 /* YouTubePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B170128BCA222628599636732F8C5A6 /* Build configuration list for PBXNativeTarget "YouTubePlayer" */;
+			buildPhases = (
+				A5A99155285602D9AD356D3D76847E45 /* Headers */,
+				0EAA3AA2836F71B2765ED12170075ECA /* Sources */,
+				F06994B1868CDD3F77F67B62C32066AD /* Frameworks */,
+				4717390B2169BC24284961E8BF8EA9CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouTubePlayer;
+			productName = YouTubePlayer;
+			productReference = 1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		9877C1E70034F7B3D85776410AA3CC99 /* Pods-GazeAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D12FBA5408D762B28C148F0034AE0859 /* Build configuration list for PBXNativeTarget "Pods-GazeAR" */;
+			buildConfigurationList = 26E73BADE18945BE90C1687FDED41722 /* Build configuration list for PBXNativeTarget "Pods-GazeAR" */;
 			buildPhases = (
-				9F656EA46C3AF07BECC2B278CCF08F4D /* Headers */,
-				CA89177420E934FAFB560D390F89C7C3 /* Sources */,
-				6F8ED50899DF5B3DB559BCC05E841474 /* Frameworks */,
+				AFAE3F7E0CE0E4D047167BC62DA30113 /* Headers */,
+				AD7C8614983BEAB8A11BB2E6305C4C3D /* Sources */,
+				96784CFA1F2C240FF672D1838303E7F3 /* Frameworks */,
+				BB37ED9FBBA29A31C825DC1B48C30EB1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E9F6DADB7B676C202A04968129AD63A0 /* PBXTargetDependency */,
+				32B4A417C8F1DC73657B5F6457C34E52 /* PBXTargetDependency */,
+				A176E3706C94093E9958C7E67381F649 /* PBXTargetDependency */,
 			);
 			name = "Pods-GazeAR";
 			productName = "Pods-GazeAR";
-			productReference = 5EEE43F69638BE6C8E84B3D1F9D179EB /* libPods-GazeAR.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 5EEE43F69638BE6C8E84B3D1F9D179EB /* Pods_GazeAR.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		CC9D73986C31CF517446AB43675B1357 /* Pods-GazeAR-GazeARUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41CE84389AA049D403C804151F09F1BE /* Build configuration list for PBXNativeTarget "Pods-GazeAR-GazeARUITests" */;
+			buildConfigurationList = 52BEDC8F930E4CD2C719FD31270C8D7F /* Build configuration list for PBXNativeTarget "Pods-GazeAR-GazeARUITests" */;
 			buildPhases = (
-				C3A1FD64DB49912B5445F980E7625CF6 /* Headers */,
-				A900B3895FFB0C2812EF3BFECE59B136 /* Sources */,
-				74F3C3F513AFC7B0563A1069D591A933 /* Frameworks */,
+				6271DC5F02BA6C9C36ACF5504041FEEB /* Headers */,
+				DE967F8D3767CFC57D1FF485708D88A0 /* Sources */,
+				F36232D840C1BBF7ACF1937489915AA6 /* Frameworks */,
+				AF521098C09425B0B48B7F5B29E48DB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				123BD90C85564750F9AE528C4E096ED4 /* PBXTargetDependency */,
+				EA4EC13ED4512429CE43845918BB39A6 /* PBXTargetDependency */,
+				D523760C68E34B047DF2C092C159EC38 /* PBXTargetDependency */,
 			);
 			name = "Pods-GazeAR-GazeARUITests";
 			productName = "Pods-GazeAR-GazeARUITests";
-			productReference = E7B8ADC8A639C1D701D8D300A3BB37EC /* libPods-GazeAR-GazeARUITests.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = E7B8ADC8A639C1D701D8D300A3BB37EC /* Pods_GazeAR_GazeARUITests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -310,7 +458,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5AA1A74F89BC7C0C44403119DCA94123 /* Products */;
+			productRefGroup = 17E30D4ACF9657F954791B8ACF76DB3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -318,84 +466,116 @@
 				9877C1E70034F7B3D85776410AA3CC99 /* Pods-GazeAR */,
 				CC9D73986C31CF517446AB43675B1357 /* Pods-GazeAR-GazeARUITests */,
 				31A4144863239E655B0717B680850FC0 /* Pods-GazeARTests */,
+				6273C43DC7FF94E93DBFF580DB584296 /* YouTubePlayer */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0936A0A1103DF65517BBC7AC5C649987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4717390B2169BC24284961E8BF8EA9CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9364E2D8EAB205C8D348410F403A0F6 /* YTPlayer.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF521098C09425B0B48B7F5B29E48DB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37ED9FBBA29A31C825DC1B48C30EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		33C75830B929249541A1487F339261D1 /* Sources */ = {
+		0EAA3AA2836F71B2765ED12170075ECA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3CF50CD32C4DAFE82D90A55EA7A9D85 /* Pods-GazeARTests-dummy.m in Sources */,
+				C25B78F3F00AFB245C90F082734744FA /* YouTubePlayer-dummy.m in Sources */,
+				9B55BD9201752AF7439D7F8BFBE31FF0 /* YouTubePlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A900B3895FFB0C2812EF3BFECE59B136 /* Sources */ = {
+		2BD59DA39ABA9A2D757BB98E8262F0CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40259D90E260FECCA42F3A1689E6FC1E /* Pods-GazeAR-GazeARUITests-dummy.m in Sources */,
+				790C65F54FFC5E07EEB2D95A7F3B1AB1 /* Pods-GazeARTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA89177420E934FAFB560D390F89C7C3 /* Sources */ = {
+		AD7C8614983BEAB8A11BB2E6305C4C3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1381A1F019E4625EF2CC040F8459BEA /* Pods-GazeAR-dummy.m in Sources */,
+				20F1922EAF253F394C67E286CFBE375C /* Pods-GazeAR-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE967F8D3767CFC57D1FF485708D88A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCCB53543A08845ED5CD43754767CCB /* Pods-GazeAR-GazeARUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		123BD90C85564750F9AE528C4E096ED4 /* PBXTargetDependency */ = {
+		32B4A417C8F1DC73657B5F6457C34E52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OpenCV;
 			target = 2C80449F84CF910DF6AD6AFDDE039F2A /* OpenCV */;
-			targetProxy = FD0C8D56C8153D39940DC3B4BA6E39AE /* PBXContainerItemProxy */;
+			targetProxy = 266E495DCD3DA33E27C0CA83007B03C3 /* PBXContainerItemProxy */;
 		};
-		A694D260BC7E338E9E43C5D3F0D38420 /* PBXTargetDependency */ = {
+		A176E3706C94093E9958C7E67381F649 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YouTubePlayer;
+			target = 6273C43DC7FF94E93DBFF580DB584296 /* YouTubePlayer */;
+			targetProxy = 4E1FB61DD2F1396046978542913E28B2 /* PBXContainerItemProxy */;
+		};
+		D523760C68E34B047DF2C092C159EC38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YouTubePlayer;
+			target = 6273C43DC7FF94E93DBFF580DB584296 /* YouTubePlayer */;
+			targetProxy = E60EA7CD1E13C0BAF294F6E6CBAB5076 /* PBXContainerItemProxy */;
+		};
+		EA4EC13ED4512429CE43845918BB39A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OpenCV;
+			target = 2C80449F84CF910DF6AD6AFDDE039F2A /* OpenCV */;
+			targetProxy = 1D803DBFBDF787F70185B7C247E875F4 /* PBXContainerItemProxy */;
+		};
+		FB8E745346D6055EF8F9289208525AD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GazeAR";
 			target = 9877C1E70034F7B3D85776410AA3CC99 /* Pods-GazeAR */;
-			targetProxy = 20F4742E9578C9733FADB81EC94E43A7 /* PBXContainerItemProxy */;
-		};
-		E9F6DADB7B676C202A04968129AD63A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OpenCV;
-			target = 2C80449F84CF910DF6AD6AFDDE039F2A /* OpenCV */;
-			targetProxy = 0C5CA34AC4A09297588A555FB4077B9E /* PBXContainerItemProxy */;
+			targetProxy = 83E6BEA36CF9EBB32FFCCF44F7302929 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12B45E573493C0971A692D17430D0A27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37449C47D922C90F6CB752C4D9CD6ADC /* Pods-GazeARTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		1A211149105AC1A80AC1FE0F0DF99A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCBFA6EC75FE4D00166E6BE914B3AB7F /* OpenCV.debug.xcconfig */;
+			baseConfigurationReference = 3F7E7A6FEBE4F87ADD0705FFD96AC3DF /* OpenCV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -409,43 +589,174 @@
 			};
 			name = Debug;
 		};
-		46CC487F083AE88FB54172E93BC30A2D /* Release */ = {
+		238CB926799BA1E7528D129D8F367DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA0BB91CD5671174FC6B4E2C553790EE /* Pods-GazeAR.release.xcconfig */;
+			baseConfigurationReference = 1153ED7E9F7AC1A0C5FD0CE934FD0AA4 /* Pods-GazeAR-GazeARUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A20723E0B9046021C5E11009DF099EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10D5D644BFF777B8558C462204D0725C /* Pods-GazeAR.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeAR/Pods-GazeAR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeAR/Pods-GazeAR.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5FC590F07FA04D6455B490AC286CC34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE53CED9223F7C30C40BED2706F9ACD5 /* OpenCV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5FC590F07FA04D6455B490AC286CC34F /* Release */ = {
+		63B2CA05F7A99C144398785DDED27862 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0497D520340F98CEF9FC92A7B6EDBF5D /* OpenCV.release.xcconfig */;
+			baseConfigurationReference = F2C562FCEEA34F6C4AACED44E086E28B /* Pods-GazeARTests.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C0D9457A542F284B33D2184F9A02426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A0CD2AFF3E203B31943F36C9722B6D /* Pods-GazeAR.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeAR/Pods-GazeAR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeAR/Pods-GazeAR.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -573,113 +884,171 @@
 			};
 			name = Release;
 		};
-		879EEE0B320105086673B2A62424F883 /* Debug */ = {
+		916B98BEFF3C08A46DA9DCCC88EE14E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4699361BF45BFC473DF687131E82D63 /* Pods-GazeAR.debug.xcconfig */;
+			baseConfigurationReference = BC7F400B293E8AD1F06233DA48AB146B /* Pods-GazeAR-GazeARUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		98A9B4FEC08EA34D4B9C78C0F9173ACD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF1A123C0FB9442AF74F2A9EBA2AF552 /* Pods-GazeAR-GazeARUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		B50BB0817237B0131502A60D10A1A928 /* Debug */ = {
+		9EB87053FEB22C4FFFCD15F8943AA22B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 273439E95AABB0E20E35122CCBCDE9BC /* Pods-GazeAR-GazeARUITests.debug.xcconfig */;
+			baseConfigurationReference = A45902F3D20002C94E1AE2EE074AB2C3 /* YouTubePlayer.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YouTubePlayer/YouTubePlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YouTubePlayer/YouTubePlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YouTubePlayer/YouTubePlayer.modulemap";
+				PRODUCT_MODULE_NAME = YouTubePlayer;
+				PRODUCT_NAME = YouTubePlayer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FC3A74EBBACB2A95E5F5E0D0F82A0697 /* Release */ = {
+		DBB5514B520ED6EF0FF753D5D9AE64A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29AED6A4E3DB579366496F431A548A9A /* Pods-GazeARTests.release.xcconfig */;
+			baseConfigurationReference = A09E4C747F95053B86F58A87798C362E /* YouTubePlayer.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YouTubePlayer/YouTubePlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YouTubePlayer/YouTubePlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YouTubePlayer/YouTubePlayer.modulemap";
+				PRODUCT_MODULE_NAME = YouTubePlayer;
+				PRODUCT_NAME = YouTubePlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC5A356B0E5EBAAEB2BDBC8F2F928742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B35D535E55E73E7BB5BE0CD2EB8BA9E /* Pods-GazeARTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3374BCB11550316E0FEA2022848854A9 /* Build configuration list for PBXNativeTarget "Pods-GazeARTests" */ = {
+		0F07A5B4373BE3F0FB6ED3D68C6BA1CD /* Build configuration list for PBXNativeTarget "Pods-GazeARTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12B45E573493C0971A692D17430D0A27 /* Debug */,
-				FC3A74EBBACB2A95E5F5E0D0F82A0697 /* Release */,
+				FC5A356B0E5EBAAEB2BDBC8F2F928742 /* Debug */,
+				63B2CA05F7A99C144398785DDED27862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41CE84389AA049D403C804151F09F1BE /* Build configuration list for PBXNativeTarget "Pods-GazeAR-GazeARUITests" */ = {
+		26E73BADE18945BE90C1687FDED41722 /* Build configuration list for PBXNativeTarget "Pods-GazeAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B50BB0817237B0131502A60D10A1A928 /* Debug */,
-				98A9B4FEC08EA34D4B9C78C0F9173ACD /* Release */,
+				3A20723E0B9046021C5E11009DF099EE /* Debug */,
+				6C0D9457A542F284B33D2184F9A02426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -693,20 +1062,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4B170128BCA222628599636732F8C5A6 /* Build configuration list for PBXNativeTarget "YouTubePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB87053FEB22C4FFFCD15F8943AA22B /* Debug */,
+				DBB5514B520ED6EF0FF753D5D9AE64A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52BEDC8F930E4CD2C719FD31270C8D7F /* Build configuration list for PBXNativeTarget "Pods-GazeAR-GazeARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238CB926799BA1E7528D129D8F367DE7 /* Debug */,
+				916B98BEFF3C08A46DA9DCCC88EE14E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AF6190B337FB4264B844753D51FB17E5 /* Build configuration list for PBXAggregateTarget "OpenCV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A211149105AC1A80AC1FE0F0DF99A9A /* Debug */,
 				5FC590F07FA04D6455B490AC286CC34F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D12FBA5408D762B28C148F0034AE0859 /* Build configuration list for PBXNativeTarget "Pods-GazeAR" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				879EEE0B320105086673B2A62424F883 /* Debug */,
-				46CC487F083AE88FB54172E93BC30A2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

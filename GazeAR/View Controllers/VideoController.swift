@@ -10,6 +10,7 @@ import UIKit
 import ARKit
 import SceneKit
 import Speech
+import YouTubePlayer
 
 class VideoController: UIViewController, ARSCNViewDelegate {
     
@@ -20,6 +21,7 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var voiceCommandWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var voiceRecognitionField: UITextField!
     var gazeTarget : UIView = UIView()
+    @IBOutlet var videoPlayer: YouTubePlayerView!
     
     // 3D ELEMENTS
     var virtualPhoneNode: SCNNode = SCNNode()
@@ -63,7 +65,13 @@ class VideoController: UIViewController, ARSCNViewDelegate {
         virtualPhoneNode.addChildNode(virtualScreenNode)
         sceneView.scene.rootNode.addChildNode(virtualPhoneNode)
         
-        // Set up Audio
+        // Set up Video
+        videoPlayer.playerVars = [
+            "playsinline": "1",
+            "controls": "0",
+            "showinfo": "0"
+            ] as YouTubePlayerView.YouTubePlayerParameters
+        videoPlayer.loadVideoID("ozUzomVQsWc")
         
         // Set up gazeTracking
         gazeTracker.setHomography(homography: homography)

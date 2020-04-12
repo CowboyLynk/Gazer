@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E69D2238377C3A8FFB919B1 /* Pods_GazeAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */; };
 		853EEBE4244270F9003D2E98 /* handleGazePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EEBE3244270F9003D2E98 /* handleGazePosition.swift */; };
 		8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD1F2440F4EA007DA3C7 /* Utilities.swift */; };
 		8550BD2224410072007DA3C7 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD2124410072007DA3C7 /* CustomNavController.swift */; };
@@ -22,9 +23,8 @@
 		858ACD2D243CD3850020D1A0 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 858ACD2C243CD3850020D1A0 /* OpenCVWrapper.mm */; };
 		85E9B2DD243CAE9A002AE366 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9B2DC243CAE9A002AE366 /* VideoController.swift */; };
 		85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEEED72436ACCD0011E50F /* Calibration.swift */; };
-		AF90077177233549601E5909 /* libPods-GazeAR-GazeARUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4C73C345E9D82B1F5CEC6 /* libPods-GazeAR-GazeARUITests.a */; };
-		B3F67933D65522CC303821BB /* libPods-GazeAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2A09FB02E59242C24EE864 /* libPods-GazeAR.a */; };
-		F8C145D175382F6836659688 /* libPods-GazeARTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE43EFB9220BD228F91CD0F5 /* libPods-GazeARTests.a */; };
+		896A4D08AA43E19D702FC847 /* Pods_GazeARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D738BCF25339FED9AFA11 /* Pods_GazeARTests.framework */; };
+		BB5C487D1A00B126CB904262 /* Pods_GazeAR_GazeARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148DDFD0154E946AA82621C0 /* Pods_GazeAR_GazeARUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		148DDFD0154E946AA82621C0 /* Pods_GazeAR_GazeARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GazeAR_GazeARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		274F9CC0D603EE4D860E633D /* Pods-GazeAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR.debug.xcconfig"; path = "Target Support Files/Pods-GazeAR/Pods-GazeAR.debug.xcconfig"; sourceTree = "<group>"; };
 		2A47071D5F5F1FF92C964893 /* Pods-GazeAR-GazeARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR-GazeARUITests.debug.xcconfig"; path = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GazeAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F00211C7C7D841ED503AB33 /* Pods-GazeAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR.release.xcconfig"; path = "Target Support Files/Pods-GazeAR/Pods-GazeAR.release.xcconfig"; sourceTree = "<group>"; };
 		791E955318912D44CD867A34 /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeARTests.debug.xcconfig"; path = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		851AD7CF243CE3960088CC48 /* GazeAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GazeAR-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -72,9 +74,7 @@
 		858ACD2E243CD3970020D1A0 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		85E9B2DC243CAE9A002AE366 /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		85FEEED72436ACCD0011E50F /* Calibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
-		8AA4C73C345E9D82B1F5CEC6 /* libPods-GazeAR-GazeARUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GazeAR-GazeARUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E2A09FB02E59242C24EE864 /* libPods-GazeAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GazeAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE43EFB9220BD228F91CD0F5 /* libPods-GazeARTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GazeARTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9D738BCF25339FED9AFA11 /* Pods_GazeARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GazeARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7220988DDD46741F82D2392 /* Pods-GazeARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeARTests.release.xcconfig"; path = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8B51226F67CD66EA952771C /* Pods-GazeAR-GazeARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeAR-GazeARUITests.release.xcconfig"; path = "Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F67933D65522CC303821BB /* libPods-GazeAR.a in Frameworks */,
+				6E69D2238377C3A8FFB919B1 /* Pods_GazeAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C145D175382F6836659688 /* libPods-GazeARTests.a in Frameworks */,
+				896A4D08AA43E19D702FC847 /* Pods_GazeARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF90077177233549601E5909 /* libPods-GazeAR-GazeARUITests.a in Frameworks */,
+				BB5C487D1A00B126CB904262 /* Pods_GazeAR_GazeARUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +218,9 @@
 		CDB3163E9E389B153CD0B3E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E2A09FB02E59242C24EE864 /* libPods-GazeAR.a */,
-				8AA4C73C345E9D82B1F5CEC6 /* libPods-GazeAR-GazeARUITests.a */,
-				AE43EFB9220BD228F91CD0F5 /* libPods-GazeARTests.a */,
+				325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */,
+				148DDFD0154E946AA82621C0 /* Pods_GazeAR_GazeARUITests.framework */,
+				AA9D738BCF25339FED9AFA11 /* Pods_GazeARTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +236,7 @@
 				85755E9624366D4C00F7BDD1 /* Sources */,
 				85755E9724366D4C00F7BDD1 /* Frameworks */,
 				85755E9824366D4C00F7BDD1 /* Resources */,
+				C6CF090CB16D74D952B1D0B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +274,7 @@
 				85755EB724366D4E00F7BDD1 /* Sources */,
 				85755EB824366D4E00F7BDD1 /* Frameworks */,
 				85755EB924366D4E00F7BDD1 /* Resources */,
+				17C33FA20C296A18DE6DBD61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +358,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17C33FA20C296A18DE6DBD61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GazeAR-GazeARUITests/Pods-GazeAR-GazeARUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		18D9F474222D4CE915C4A9C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +417,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CF090CB16D74D952B1D0B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GazeAR/Pods-GazeAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GazeAR/Pods-GazeAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GazeAR/Pods-GazeAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF8A09A2FEAC16046EDC0A3D /* [CP] Check Pods Manifest.lock */ = {

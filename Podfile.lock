@@ -1,16 +1,20 @@
 PODS:
   - OpenCV (4.1.0)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - OpenCV
+  - YouTubePlayer
 
 SPEC REPOS:
   trunk:
     - OpenCV
+    - YouTubePlayer
 
 SPEC CHECKSUMS:
   OpenCV: 52cd4d72ff29e2be83421477aec5447320b7fb19
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: acc961c42949a00e54eac3bd17ecb4c3e7e5bc6a
+PODFILE CHECKSUM: ca15a0cfab7aea6305d9ef5b58e168433bfb8edc
 
 COCOAPODS: 1.9.1

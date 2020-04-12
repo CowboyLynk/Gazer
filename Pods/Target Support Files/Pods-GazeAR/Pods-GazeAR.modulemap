@@ -1,0 +1,6 @@
+framework module Pods_GazeAR {
+  umbrella header "Pods-GazeAR-umbrella.h"
+
+  export *
+  module * { export * }
+}
