@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
+import Speech
 
 let allowedOffScreenDistSquared = CGFloat(2500)
 let nearingSpeechViewDist = CGFloat(150)
 let speechIconSizeDisabled : CGFloat = 50
 let speechIconSizeEnabled : CGFloat = 400
-let gazeTimeout: Double = 1
+let gazeTimeout: Double = 0.7
 
 extension VideoController {
     
@@ -37,19 +38,17 @@ extension VideoController {
         let wasTouchingSpeechView = boundingRect.contains(gaze.coords)
         let sameAction = wasTouchingSpeechView == touchedSpeechView
         let timeoutPassed = Date().timeIntervalSince(gaze.time) > gazeTimeout
-        
-        // Update gaze
-        if sameAction || timeoutPassed {
-            gaze.setCoords(newCoords: boundedAdjustedGaze)
-        }
-        
-        // Toggle speech
-        if !sameAction && (timeoutPassed || touchedSpeechView) {
+        if !sameAction && timeoutPassed {
             if touchedSpeechView {
                 handleStartSpeech()
             } else {
                 handleEndSpeech()
             }
+        }
+        
+        // Update gaze
+        if sameAction || timeoutPassed {
+            gaze.setCoords(newCoords: boundedAdjustedGaze)
         }
     }
     
@@ -64,12 +63,13 @@ extension VideoController {
     }
     
     func handleStartSpeech() {
-        print("user looked at speech icon")
+        voiceRecognitionField.text = ""
+        recordAndRecognizeSpeech()
         animateSpeechCommandView(toWidth: speechIconSizeEnabled)
     }
     
     func handleEndSpeech() {
-        print("user looked away from speech icon")
+        cancelRecording()
         animateSpeechCommandView(toWidth: speechIconSizeDisabled)
     }
     
@@ -78,5 +78,63 @@ extension VideoController {
             self.voiceCommandWidthConstraint.constant = width // Some value
             self.view.layoutIfNeeded()
         })
+    }
+}
+
+extension VideoController: SFSpeechRecognizerDelegate {
+    func recordAndRecognizeSpeech() {
+        let node = audioEngine.inputNode
+        let recordingFormat = node.outputFormat(forBus: 0)
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
+            self.request.append(buffer)
+        }
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+        } catch {
+            self.sendAlert(title: "Speech Recognizer Error", message: "There has been an audio engine error.")
+            return print(error)
+        }
+        guard let myRecognizer = SFSpeechRecognizer() else { return }
+        if !myRecognizer.isAvailable {
+            self.sendAlert(title: "Speech Recognizer Error", message: "Speech recognition is not currently available. Check back at a later time.")
+            // Recognizer is not available right now
+            return
+        }
+        recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
+            if let result = result {
+                
+                let bestString = result.bestTranscription.formattedString
+                var lastString: String = ""
+                for segment in result.bestTranscription.segments {
+                    let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
+                    lastString = String(bestString[indexTo...])
+                }
+                self.voiceRecognitionField.text = bestString
+                self.checkForCommands(resultString: lastString)
+            } else if let error = error {
+                print(error)
+            }
+        })
+    }
+    
+    func cancelRecording() {
+        recognitionTask?.finish()
+        recognitionTask = nil
+        
+        // stop audio
+        request.endAudio()
+        audioEngine.stop()
+        audioEngine.inputNode.removeTap(onBus: 0)
+    }
+    
+    func checkForCommands(resultString: String) {
+        
+    }
+    
+    func sendAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

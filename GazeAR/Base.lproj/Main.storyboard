@@ -196,7 +196,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KY5-AL-Sfg">
-                                                    <rect key="frame" x="0.0" y="38" width="244" height="2"/>
+                                                    <rect key="frame" x="0.0" y="37.5" width="244" height="2"/>
                                                 </progressView>
                                             </subviews>
                                             <constraints>
@@ -272,6 +272,11 @@
                                 <rect key="frame" x="614" y="892" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                             </arscnView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrA-Ig-8GI">
+                                <rect key="frame" x="13" y="58" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-Ai-pOe">
                                 <rect key="frame" x="20" y="70" width="50" height="50"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HlF-aY-tZM">
@@ -295,10 +300,23 @@
                                                 <constraint firstAttribute="height" constant="25" id="eP8-a1-Iff"/>
                                             </constraints>
                                         </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say a command" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1S-UC-6MO">
+                                            <rect key="frame" x="50" y="8" width="169" height="34"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                    <color key="value" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="uRt-vJ-ueq" firstAttribute="leading" secondItem="HlF-aY-tZM" secondAttribute="leading" constant="12" id="OdW-zW-E3r"/>
                                         <constraint firstItem="uRt-vJ-ueq" firstAttribute="centerY" secondItem="HlF-aY-tZM" secondAttribute="centerY" id="SPV-6H-PJ2"/>
+                                        <constraint firstItem="W1S-UC-6MO" firstAttribute="leading" secondItem="uRt-vJ-ueq" secondAttribute="leading" constant="38" id="eeG-Wm-5df"/>
+                                        <constraint firstItem="W1S-UC-6MO" firstAttribute="centerY" secondItem="uRt-vJ-ueq" secondAttribute="centerY" id="okd-qL-KdR"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -310,13 +328,31 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-8S-yoK">
+                                <rect key="frame" x="0.0" y="208" width="834" height="746"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Lco-Ai-pOe" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" constant="20" id="7Xw-nK-aCM"/>
+                            <constraint firstItem="3p8-8S-yoK" firstAttribute="trailing" secondItem="jh0-jO-v6a" secondAttribute="trailing" id="L5C-VI-CDn"/>
                             <constraint firstItem="Lco-Ai-pOe" firstAttribute="top" secondItem="jh0-jO-v6a" secondAttribute="top" constant="20" id="Udd-cY-b9T"/>
+                            <constraint firstItem="3p8-8S-yoK" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" id="WTZ-IP-Emm"/>
+                            <constraint firstItem="3p8-8S-yoK" firstAttribute="centerY" secondItem="jh0-jO-v6a" secondAttribute="centerY" id="agE-g1-4vp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jh0-jO-v6a"/>
                     </view>
@@ -327,6 +363,7 @@
                         <outlet property="sceneView" destination="4zU-HY-8mU" id="eQt-8t-Tem"/>
                         <outlet property="voiceCommandView" destination="Lco-Ai-pOe" id="9TE-7z-sIH"/>
                         <outlet property="voiceCommandWidthConstraint" destination="Yat-JI-vKL" id="89k-n2-COg"/>
+                        <outlet property="voiceRecognitionField" destination="W1S-UC-6MO" id="kt7-Na-YXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koV-Ky-iAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -336,5 +373,6 @@
     </scenes>
     <resources>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="stick" width="1328" height="746"/>
     </resources>
 </document>

@@ -9,6 +9,7 @@
 import UIKit
 import ARKit
 import SceneKit
+import Speech
 
 class VideoController: UIViewController, ARSCNViewDelegate {
     
@@ -17,6 +18,7 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var voiceCommandView: UIVisualEffectView!
     @IBOutlet weak var voiceCommandWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var voiceRecognitionField: UITextField!
     var gazeTarget : UIView = UIView()
     
     // 3D ELEMENTS
@@ -34,7 +36,12 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     var gaze = Gaze(coords: CGPoint(x: Int(Constants.iPadPointSize.x)/2,
                                     y: Int(Constants.iPadPointSize.y)/2))
     var isGazeOnScreen = false
-    var isSpeechEnabled = false
+    
+    // Audio
+    let audioEngine = AVAudioEngine()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    let request = SFSpeechAudioBufferRecognitionRequest()
+    var recognitionTask: SFSpeechRecognitionTask?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -55,6 +62,8 @@ class VideoController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(gazeTracker)
         virtualPhoneNode.addChildNode(virtualScreenNode)
         sceneView.scene.rootNode.addChildNode(virtualPhoneNode)
+        
+        // Set up Audio
         
         // Set up gazeTracking
         gazeTracker.setHomography(homography: homography)
