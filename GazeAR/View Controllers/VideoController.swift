@@ -10,11 +10,16 @@ import UIKit
 import ARKit
 import SceneKit
 
-class GameController: UIViewController, ARSCNViewDelegate {
+class VideoController: UIViewController, ARSCNViewDelegate {
     
+    // MARK: - Variables
+    // 2D ELEMENTS
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var voiceCommandView: UIVisualEffectView!
+    @IBOutlet weak var voiceCommandWidthConstraint: NSLayoutConstraint!
     var gazeTarget : UIView = UIView()
     
+    // 3D ELEMENTS
     var virtualPhoneNode: SCNNode = SCNNode()
     var virtualScreenNode: SCNNode = {
         let screenGeometry = SCNPlane(width: 1, height: 1)
@@ -22,8 +27,12 @@ class GameController: UIViewController, ARSCNViewDelegate {
         screenGeometry.firstMaterial?.diffuse.contents = UIColor.green
         return SCNNode(geometry: screenGeometry)
     }()
+    
+    // MISC
     var gazeTracker = GazeTracker()
     var homography : Homography?
+    var isGazeOnScreen = false
+    var isSpeechEnabled = false
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -79,13 +88,15 @@ class GameController: UIViewController, ARSCNViewDelegate {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         gazeTracker.transform = node.transform
         guard let rawCoords: CGPoint = gazeTracker.update(withFaceAnchor: faceAnchor, virtualPhoneNode: virtualPhoneNode) else { return }
-
+        let boundedRawCoords = boundedCoords(coords: rawCoords)
+        
         // Use the homography to adjust the position
         let adjustedCoords = gazeTracker.getTransformedPoint(point: rawCoords)
         let boundedAdjustedCoords = boundedCoords(coords: adjustedCoords)
         
         // Update the tracker and labels with the adjusted Position
         DispatchQueue.main.async(execute: {() -> Void in
+            self.handleGaze(boundedAdjustedGaze: boundedAdjustedCoords, rawGaze: rawCoords, boudnedRawGaze: boundedRawCoords)
             self.gazeTarget.center = boundedAdjustedCoords
         })
     }

@@ -18,8 +18,6 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var calibrationView: UIView!
     @IBOutlet weak var gazePosX: UILabel!
     @IBOutlet weak var gazePosY: UILabel!
-    @IBOutlet weak var adjustedGazePosX: UILabel!
-    @IBOutlet weak var adjustedGazePosY: UILabel!
     @IBOutlet weak var calibrationProgressBar: UIProgressView!
     @IBOutlet weak var calibrationDoneButton: UIButton!
     var gazeTarget : UIView = UIView()
@@ -87,9 +85,9 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is GameController
+        if segue.destination is VideoController
         {
-            let vc = segue.destination as? GameController
+            let vc = segue.destination as? VideoController
             vc?.homography = gazeTracker.homography
         }
     }
@@ -124,14 +122,7 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         gazeTracker.transform = node.transform
         guard let rawCoords: CGPoint = gazeTracker.update(withFaceAnchor: faceAnchor, virtualPhoneNode: virtualPhoneNode) else { return }
-        
-        // Update the labels with the raw position
-        let boundedRawCoords = boundedCoords(coords: rawCoords)
-        DispatchQueue.main.async(execute: {() -> Void in
-            self.gazePosX.text = "\(Int(round(boundedRawCoords.x)))"
-            self.gazePosY.text = "\(Int(round(boundedRawCoords.y)))"
-        })
-        
+
         // Use the homography to adjust the position
         let adjustedCoords = gazeTracker.getTransformedPoint(point: rawCoords)
         let boundedAdjustedCoords = boundedCoords(coords: adjustedCoords)
@@ -139,8 +130,8 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         // Update the tracker and labels with the adjusted Position
         DispatchQueue.main.async(execute: {() -> Void in
             self.gazeTarget.center = boundedAdjustedCoords
-            self.adjustedGazePosX.text = "\(Int(round(boundedAdjustedCoords.x)))"
-            self.adjustedGazePosY.text = "\(Int(round(boundedAdjustedCoords.y)))"
+            self.gazePosX.text = "\(Int(round(boundedAdjustedCoords.x)))"
+            self.gazePosY.text = "\(Int(round(boundedAdjustedCoords.y)))"
         })
     }
     

@@ -10,9 +10,6 @@ import Foundation
 import ARKit
 import SceneKit
 
-let iPadPointSize = simd_float2(1668/2, 2388/2)
-let iPadMeterSize = simd_float2(0.16048181818181817, 0.22975454545454543)
-
 class GazeTracker : SCNNode {
     // MARK: Constants
     let offset = simd_float2(1668/4, 2388/4)
@@ -118,9 +115,9 @@ class GazeTracker : SCNNode {
         // Get the local coordinates
         // TODO: This formula needs to be adjusted and calibrated
         let xLC = ((result1.localCoordinates.x + result2.localCoordinates.x) / 2.0)
-        let x = xLC / (iPadMeterSize.x / 2.0) * iPadPointSize.x + offset.x
+        let x = xLC / (Constants.iPadMeterSize.x / 2.0) * Constants.iPadPointSize.x + offset.x
         let yLC = -((result1.localCoordinates.y + result2.localCoordinates.y) / 2.0);
-        let y = yLC / (iPadMeterSize.y / 2.0) * iPadPointSize.y + offset.y
+        let y = yLC / (Constants.iPadMeterSize.y / 2.0) * Constants.iPadPointSize.y + offset.y
         
         // Smooth the values
         positions.append(simd_float2(x,y));
