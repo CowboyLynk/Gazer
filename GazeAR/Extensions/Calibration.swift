@@ -86,8 +86,7 @@ extension CalibrationController {
             for i in [0, 1, 3, 4, 6, 7] {  // All top points
 //            for i in [0, 1, 7, 6] {  // Top corners
 //            for i in [0, 2, 8, 6] {  // All corners
-                let savedGazePoint = calibrationPoints[i]
-                let gazePoint = CGPoint(x: CGFloat(savedGazePoint.x), y: CGFloat(savedGazePoint.y))
+                let gazePoint = calibrationPoints[i]
                 from.append(gazePoint)
                 
                 let savedCalibrationPoint = calibrationView.convert(gridPoints[i].center, to: view)

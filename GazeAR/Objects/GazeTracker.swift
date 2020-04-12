@@ -51,7 +51,7 @@ class GazeTracker : SCNNode {
     }()
     var leftEyeEnd: SCNNode = SCNNode()
     var rightEyeEnd: SCNNode = SCNNode()
-    var coords = simd_float2(0, 0)
+    var coords = CGPoint(x: 0, y: 0)
     
     // MARK: Initialization
     override init() {
@@ -105,8 +105,9 @@ class GazeTracker : SCNNode {
             options: hitTestOptions)
         
         if (hitTestLeftEye.count > 0 && hitTestRightEye.count > 0) {
-            coords = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
-            return CGPoint(x: CGFloat(coords.x), y: CGFloat(coords.y))
+            let screenPos = screenPositionFromHittest(result1: hitTestLeftEye[0], result2: hitTestRightEye[0])
+            coords = CGPoint(x: CGFloat(screenPos.x), y: CGFloat(screenPos.y))
+            return coords
         }
         return nil
     }
@@ -135,5 +136,20 @@ class GazeTracker : SCNNode {
         total.y /= Float(positions.count)
         
         return total
+    }
+}
+
+class Gaze {
+    var coords: CGPoint
+    var time: Date
+    
+    init(coords: CGPoint) {
+        self.coords = coords
+        self.time = Date()
+    }
+    
+    func setCoords(newCoords: CGPoint) {
+        coords = newCoords
+        time = Date()
     }
 }

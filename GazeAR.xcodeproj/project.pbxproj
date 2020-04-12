@@ -123,8 +123,8 @@
 		853EEBE2244270D1003D2E98 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				85FEEED72436ACCD0011E50F /* Calibration.swift */,
 				853EEBE3244270F9003D2E98 /* handleGazePosition.swift */,
+				85FEEED72436ACCD0011E50F /* Calibration.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -34,7 +34,7 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     
     // Calibration
     var gridPoints: [UIView] = []  // The initial grid made for calibration
-    var calibrationPoints: [simd_float2] = []  // The points the user looked at during calibration
+    var calibrationPoints: [CGPoint] = []  // The points the user looked at during calibration
     var calibrationProgress = 0
     
     // MARK: - Lifecycle

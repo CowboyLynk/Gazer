@@ -31,6 +31,8 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     // MISC
     var gazeTracker = GazeTracker()
     var homography : Homography?
+    var gaze = Gaze(coords: CGPoint(x: Int(Constants.iPadPointSize.x)/2,
+                                    y: Int(Constants.iPadPointSize.y)/2))
     var isGazeOnScreen = false
     var isSpeechEnabled = false
     
@@ -96,7 +98,7 @@ class VideoController: UIViewController, ARSCNViewDelegate {
         
         // Update the tracker and labels with the adjusted Position
         DispatchQueue.main.async(execute: {() -> Void in
-            self.handleGaze(boundedAdjustedGaze: boundedAdjustedCoords, rawGaze: rawCoords, boudnedRawGaze: boundedRawCoords)
+            self.handleGaze(boundedAdjustedGaze: boundedAdjustedCoords, rawGaze: rawCoords, boundedRawGaze: boundedRawCoords)
             self.gazeTarget.center = boundedAdjustedCoords
         })
     }

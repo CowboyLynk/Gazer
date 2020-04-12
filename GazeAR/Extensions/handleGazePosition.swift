@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 
 let allowedOffScreenDistSquared = CGFloat(2500)
-let nearingSpeechViewDist = CGFloat(200)
+let nearingSpeechViewDist = CGFloat(150)
 let speechIconSizeDisabled : CGFloat = 50
 let speechIconSizeEnabled : CGFloat = 400
+let gazeTimeout: Double = 1
 
 extension VideoController {
     
-    func handleGaze(boundedAdjustedGaze : CGPoint, rawGaze : CGPoint, boudnedRawGaze : CGPoint) {
+    func handleGaze(boundedAdjustedGaze : CGPoint, rawGaze : CGPoint, boundedRawGaze : CGPoint) {
         
         // Check if the gaze is off the screen
-        let squaredScreenDist = CGPointDistanceSquared(from: rawGaze, to: boudnedRawGaze)
+        let squaredScreenDist = CGPointDistanceSquared(from: rawGaze, to: boundedRawGaze)
         if squaredScreenDist <= allowedOffScreenDistSquared && !isGazeOnScreen {
             handleOnScreenGaze()
         } else if squaredScreenDist > allowedOffScreenDistSquared && isGazeOnScreen {
@@ -33,10 +34,22 @@ extension VideoController {
                                   width: voiceCommandRect.width + nearingSpeechViewDist,
                                   height: voiceCommandRect.height + nearingSpeechViewDist)
         let touchedSpeechView = boundingRect.contains(boundedAdjustedGaze)
-        if touchedSpeechView && !isSpeechEnabled {
-            handleStartSpeech()
-        } else if !touchedSpeechView && isSpeechEnabled  {
-            handleEndSpeech()
+        let wasTouchingSpeechView = boundingRect.contains(gaze.coords)
+        let sameAction = wasTouchingSpeechView == touchedSpeechView
+        let timeoutPassed = Date().timeIntervalSince(gaze.time) > gazeTimeout
+        
+        // Update gaze
+        if sameAction || timeoutPassed {
+            gaze.setCoords(newCoords: boundedAdjustedGaze)
+        }
+        
+        // Toggle speech
+        if !sameAction && (timeoutPassed || touchedSpeechView) {
+            if touchedSpeechView {
+                handleStartSpeech()
+            } else {
+                handleEndSpeech()
+            }
         }
     }
     
@@ -52,13 +65,11 @@ extension VideoController {
     
     func handleStartSpeech() {
         print("user looked at speech icon")
-        isSpeechEnabled = true
         animateSpeechCommandView(toWidth: speechIconSizeEnabled)
     }
     
     func handleEndSpeech() {
         print("user looked away from speech icon")
-        isSpeechEnabled = false
         animateSpeechCommandView(toWidth: speechIconSizeDisabled)
     }
     
