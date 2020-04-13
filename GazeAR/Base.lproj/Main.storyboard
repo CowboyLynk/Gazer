@@ -268,9 +268,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zU-HY-8mU">
-                                <rect key="frame" x="614" y="892" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zU-HY-8mU">
+                                <rect key="frame" x="0.0" y="541" width="834" height="571"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVt-6e-Zu2" customClass="YouTubePlayerView" customModule="YouTubePlayer">
                                 <rect key="frame" x="0.0" y="50" width="834" height="491"/>
@@ -345,11 +344,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4zU-HY-8mU" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" id="0Gd-mD-HPw"/>
+                            <constraint firstItem="4zU-HY-8mU" firstAttribute="bottom" secondItem="jh0-jO-v6a" secondAttribute="bottom" id="2wo-fX-naz"/>
                             <constraint firstItem="Lco-Ai-pOe" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" constant="20" id="7Xw-nK-aCM"/>
+                            <constraint firstItem="4zU-HY-8mU" firstAttribute="trailing" secondItem="jh0-jO-v6a" secondAttribute="trailing" id="Pep-mD-qVt"/>
                             <constraint firstItem="Lco-Ai-pOe" firstAttribute="top" secondItem="jh0-jO-v6a" secondAttribute="top" constant="20" id="Udd-cY-b9T"/>
                             <constraint firstItem="VVt-6e-Zu2" firstAttribute="trailing" secondItem="jh0-jO-v6a" secondAttribute="trailing" id="V4a-NW-VHD"/>
                             <constraint firstItem="VVt-6e-Zu2" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" id="ipJ-UW-XGf"/>
                             <constraint firstItem="jh0-jO-v6a" firstAttribute="top" secondItem="VVt-6e-Zu2" secondAttribute="top" id="kzn-T0-Lps"/>
+                            <constraint firstItem="4zU-HY-8mU" firstAttribute="top" secondItem="VVt-6e-Zu2" secondAttribute="bottom" id="vhM-Qt-qL5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jh0-jO-v6a"/>
                     </view>

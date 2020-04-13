@@ -15,6 +15,7 @@ let nearingSpeechViewDist = CGFloat(150)
 let speechIconSizeDisabled : CGFloat = 50
 let speechIconSizeEnabled : CGFloat = 400
 let gazeTimeout: Double = 0.7
+let speechTimeout: Double = 3
 
 extension VideoController {
     
@@ -47,46 +48,46 @@ extension VideoController {
             }
         }
         
-        // Update gaze
+        // Update last relevant gaze
         if sameAction || timeoutPassed {
             gaze.setCoords(newCoords: boundedAdjustedGaze)
         }
         
+        // Update the progress timeout bar
         var progress = 1.0
         if !sameAction {
             progress = timeDelta / gazeTimeout
             if !touchedSpeechView {
                 progress = 1 - progress
             }
-        } else {
-            if !touchedSpeechView {
-                progress = 0.0
-            }
+        } else if !touchedSpeechView {
+            progress = 0.0
         }
         circleProgressIndicator.updateCircle(progress: CGFloat(progress))
-        
     }
     
     func handleOnScreenGaze() {
-        print("user looked on screen")
         isGazeOnScreen = true
     }
     
     func handleOffScreenGaze() {
-        print("user looked off screen")
         isGazeOnScreen = false
     }
     
     func handleStartSpeech() {
+        speechTimer?.invalidate()
         videoPlayer.pause()
         voiceRecognitionField.text = ""
         recordAndRecognizeSpeech()
         animateSpeechCommandView(toWidth: speechIconSizeEnabled)
     }
     
-    func handleEndSpeech() {
-        cancelRecording()
-        animateSpeechCommandView(toWidth: speechIconSizeDisabled)
+    @objc func handleEndSpeech() {
+        if recognitionTask != nil {
+            speechTimer?.invalidate()
+            cancelRecording()
+            animateSpeechCommandView(toWidth: speechIconSizeDisabled)
+        }
     }
     
     func animateSpeechCommandView(toWidth width : CGFloat) {
@@ -119,15 +120,15 @@ extension VideoController: SFSpeechRecognizerDelegate {
         }
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let result = result {
-                
                 let bestString = result.bestTranscription.formattedString
-                var lastString: String = ""
-                for segment in result.bestTranscription.segments {
-                    let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
-                    lastString = String(bestString[indexTo...])
-                }
                 self.voiceRecognitionField.text = bestString
-                self.checkForCommands(fullString: bestString, lastString: lastString)
+                if result.isFinal {
+                    self.checkForCommands(transcript: bestString)
+                } else {
+                    // reset the timer
+                    self.speechTimer?.invalidate()
+                    self.speechTimer = Timer.scheduledTimer(timeInterval: speechTimeout, target: self, selector: #selector(self.handleEndSpeech), userInfo: nil, repeats: false)
+                }
             } else if let error = error {
                 print(error)
             }
@@ -144,15 +145,66 @@ extension VideoController: SFSpeechRecognizerDelegate {
         audioEngine.inputNode.removeTap(onBus: 0)
     }
     
-    func checkForCommands(fullString: String, lastString: String) {
-        let lowercaseLastString = lastString.lowercased()
-        switch lowercaseLastString {
-        case "start", "play", "resume":
-            videoPlayer.play()
-        case "stop", "pause", "end":
-            videoPlayer.pause()
-        default: break
+    func checkForCommands(transcript: String) {
+        
+        // Check for seek command
+        let skipToRegex = try? NSRegularExpression(pattern: "(skip|go|seek) to (?<timecode>[0-9]+)", options: .caseInsensitive)
+        if let match = skipToRegex?.firstMatch(in: transcript, options: [], range: NSRange(location: 0, length: transcript.utf16.count)) {
+            let timecodeRange = Range(match.range(withName: "timecode"), in: transcript)!
+            if let timecode = processMinutesAndSeconds(timecode: Int(transcript[timecodeRange])!) {
+                videoPlayer.play()
+                videoPlayer.seekTo(Float(timecode), seekAhead: true)
+                return
+            }
         }
+        
+        // Check for alt seek command
+        let skipToAltRegex = try? NSRegularExpression(pattern: "(skip|go|seek) to (?<minutes>\\w+) minutes?(( and)? (?<seconds>\\w+) seconds?)?", options: .caseInsensitive)
+        if let match = skipToAltRegex?.firstMatch(in: transcript, options: [], range: NSRange(location: 0, length: transcript.utf16.count)) {
+            let minutesRange = Range(match.range(withName: "minutes"), in: transcript)!
+            let minutesString = String(transcript[minutesRange])
+            let minutes = Int(minutesString) ?? convertWrittenNumToInt(numString: minutesString)
+            var seconds = 0
+            if let secondsRange = Range(match.range(withName: "seconds"), in: transcript) {
+                let secondsString = String(transcript[secondsRange])
+                seconds = Int(secondsString) ?? convertWrittenNumToInt(numString: secondsString) ?? 0
+            }
+            
+            if minutes != nil {
+                let timecode = 60 * minutes! + seconds
+                videoPlayer.play()
+                videoPlayer.seekTo(Float(timecode), seekAhead: true)
+                return
+            }
+        }
+
+        
+        let lowercaseTranscript = transcript.lowercased()
+        for word in lowercaseTranscript.split(separator: " ") {
+            switch word {
+            case "start", "play", "resume":
+                videoPlayer.play()
+            case "stop", "pause", "end":
+                videoPlayer.pause()
+            default: break
+            }
+        }
+    }
+    
+    func processMinutesAndSeconds(timecode: Int) -> Int? {
+        if timecode <= 10 {
+            return timecode
+        }
+        
+        let secondsOnes = timecode % 10
+        let reducedTimecode = timecode / 10
+        let secondsTens = reducedTimecode % 10
+        let seconds = secondsTens * 10 + secondsOnes
+        let minutes = reducedTimecode / 10
+        if seconds > 59 {
+            return nil
+        }
+        return minutes * 60 + seconds
     }
     
     func sendAlert(title: String, message: String) {

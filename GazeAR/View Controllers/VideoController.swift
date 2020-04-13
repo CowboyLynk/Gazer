@@ -39,6 +39,7 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     var gaze = Gaze(coords: CGPoint(x: Int(Constants.iPadPointSize.x)/2,
                                     y: Int(Constants.iPadPointSize.y)/2))
     var isGazeOnScreen = false
+    var speechTimer: Timer?
     
     // Audio
     let audioEngine = AVAudioEngine()
