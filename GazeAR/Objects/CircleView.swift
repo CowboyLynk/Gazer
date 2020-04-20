@@ -13,8 +13,6 @@ class CircleView: UIView {
     var circleLayer: CAShapeLayer!
     let borderWidth: CGFloat = 5
     
-    
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -23,7 +21,6 @@ class CircleView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
-//        fatalError("init(coder:) has not been implemented")
     }
     
     func setup() {
@@ -45,10 +42,17 @@ class CircleView: UIView {
 
         // Add the circleLayer to the view's layer's sublayers
         layer.addSublayer(circleLayer)
+        
+        // make circle
+        self.layer.cornerRadius = frame.size.width / 2
     }
     
     func updateCircle(progress: CGFloat) {
         circleLayer.strokeEnd = progress
+    }
+    
+    func updateColor(color: UIColor) {
+        circleLayer.strokeColor = color.cgColor
     }
     
     func resetColor() {
@@ -56,10 +60,16 @@ class CircleView: UIView {
     }
     
     func recognizedCommand() {
-        circleLayer.strokeColor = UIColor.systemGreen.cgColor
+        self.backgroundColor = UIColor.systemGreen
+        let _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.resetVisualFeedback), userInfo: nil, repeats: false)
     }
     
     func unrecognizedCommand() {
-        circleLayer.strokeColor = UIColor.systemRed.cgColor
+        self.backgroundColor = UIColor.systemRed
+        let _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.resetVisualFeedback), userInfo: nil, repeats: false)
+    }
+    
+    @objc func resetVisualFeedback() {
+        self.backgroundColor = UIColor.clear
     }
 }

@@ -81,9 +81,6 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-Jy-xBN">
-                                <rect key="frame" x="0.0" y="50" width="834" height="1062"/>
-                            </view>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2l-Bh-541">
                                 <rect key="frame" x="614" y="892" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -91,12 +88,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="leading" secondItem="aYj-LT-8T8" secondAttribute="leading" id="2Lw-nD-rCs"/>
                             <constraint firstItem="E8l-mP-qML" firstAttribute="leading" secondItem="aYj-LT-8T8" secondAttribute="leading" id="377-kU-dLM"/>
-                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="top" secondItem="aYj-LT-8T8" secondAttribute="top" id="HWV-wR-vi5"/>
-                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="bottom" secondItem="aYj-LT-8T8" secondAttribute="bottom" id="MVr-IR-9Bq"/>
                             <constraint firstItem="E8l-mP-qML" firstAttribute="bottom" secondItem="aYj-LT-8T8" secondAttribute="bottom" id="SW4-1D-8Fl"/>
-                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="trailing" secondItem="aYj-LT-8T8" secondAttribute="trailing" id="g8J-nb-SBe"/>
                             <constraint firstItem="E8l-mP-qML" firstAttribute="trailing" secondItem="aYj-LT-8T8" secondAttribute="trailing" id="uoh-fy-67C"/>
                             <constraint firstItem="E8l-mP-qML" firstAttribute="top" secondItem="aYj-LT-8T8" secondAttribute="top" id="yek-U3-T2v"/>
                         </constraints>
@@ -105,7 +98,6 @@
                     <navigationItem key="navigationItem" id="5Bg-Ib-7mh"/>
                     <connections>
                         <outlet property="sceneView" destination="a2l-Bh-541" id="xvy-yZ-Eqv"/>
-                        <outlet property="visualFeedbackView" destination="Cpl-Jy-xBN" id="K8Q-oT-8kL"/>
                         <outlet property="webView" destination="E8l-mP-qML" id="gVz-QC-2dh"/>
                     </connections>
                 </viewController>

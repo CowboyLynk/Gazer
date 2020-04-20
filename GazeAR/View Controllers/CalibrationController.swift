@@ -101,7 +101,7 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        let segueIdentifier = "doneCalibratingSegueWeb"
+        let segueIdentifier = "doneCalibratingSegueVideo"
         if finishedCalibrating() {
             performSegue(withIdentifier: segueIdentifier, sender: nil)
         } else {

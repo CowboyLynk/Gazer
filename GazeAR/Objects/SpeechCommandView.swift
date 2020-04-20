@@ -65,6 +65,10 @@ class SpeechCommandView: UIView {
         ]
         self.addSubview(blurEffectView)
         
+        // Progress indicator
+        circleProgressIndicator = CircleView(frame: fullFrame)
+        self.addSubview(circleProgressIndicator)
+        
         // Microphone icon
         let micSize = frameHeight * 0.5
         let image = UIImage(systemName: "mic.fill")
@@ -94,10 +98,6 @@ class SpeechCommandView: UIView {
         ]
         self.addSubview(voiceRecognitionField)
         
-        // Progress indicator
-        circleProgressIndicator = CircleView(frame: fullFrame)
-        self.addSubview(circleProgressIndicator)
-        
         let constraints = blurViewConstraints + micConstraints + recognitionContraints
         NSLayoutConstraint.activate(constraints)
         self.layoutIfNeeded()
@@ -120,6 +120,7 @@ class SpeechCommandView: UIView {
     }
     
     func updateCircle(progress: CGFloat) {
+        circleProgressIndicator.resetColor()
         circleProgressIndicator.updateCircle(progress: progress)
     }
     
@@ -159,6 +160,11 @@ extension SpeechCommandView: SFSpeechRecognizerDelegate {
                 self.voiceRecognitionField.text = bestString
                 if result.isFinal {
                     let isCommandRecognized = self.delegate.processCommand(command: bestString)
+                    if isCommandRecognized {
+                        self.circleProgressIndicator.recognizedCommand()
+                    } else {
+                        self.circleProgressIndicator.unrecognizedCommand()
+                    }
                 } else {
                     // reset the timer
                     self.speechTimer?.invalidate()

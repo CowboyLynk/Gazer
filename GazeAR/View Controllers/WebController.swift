@@ -18,7 +18,6 @@ class WebController: UIViewController, ARSCNViewDelegate, WKNavigationDelegate {
     // 2D ELEMENTS
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var webView: WKWebView!
-    @IBOutlet var visualFeedbackView: UIView!
     var gazeTarget : UIView = UIView()
     var speechCommandView: SpeechCommandView!
     
@@ -74,6 +73,7 @@ class WebController: UIViewController, ARSCNViewDelegate, WKNavigationDelegate {
         let url = URL(string: "https://www.allrecipes.com/")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        webView.layer.borderColor = UIColor.systemRed.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
