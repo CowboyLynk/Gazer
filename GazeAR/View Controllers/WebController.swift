@@ -1,8 +1,8 @@
 //
-//  GameController.swift
+//  WebController.swift
 //  GazeAR
 //
-//  Created by Cowboy Lynk on 4/7/20.
+//  Created by Cowboy Lynk on 4/19/20.
 //  Copyright © 2020 Cowboy Lynk. All rights reserved.
 //
 
@@ -10,14 +10,15 @@ import UIKit
 import ARKit
 import SceneKit
 import Speech
-import YouTubePlayer
+import WebKit
 
-class VideoController: UIViewController, ARSCNViewDelegate {
+class WebController: UIViewController, ARSCNViewDelegate, WKNavigationDelegate {
     
     // MARK: - Variables
     // 2D ELEMENTS
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet var videoPlayer: YouTubePlayerView!
+    @IBOutlet var webView: WKWebView!
+    @IBOutlet var visualFeedbackView: UIView!
     var gazeTarget : UIView = UIView()
     var speechCommandView: SpeechCommandView!
     
@@ -36,6 +37,9 @@ class VideoController: UIViewController, ARSCNViewDelegate {
     var isGazeOnScreen = false
     var gaze = Gaze(coords: CGPoint(x: Int(Constants.iPadPointSize.x)/2,
                                     y: Int(Constants.iPadPointSize.y)/2))
+    let maxScrollSpeed: CGFloat = 5  // pixels
+    let scrollAreaSize: CGFloat = 250
+    var scrollEnabled = true
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -62,16 +66,14 @@ class VideoController: UIViewController, ARSCNViewDelegate {
         virtualPhoneNode.addChildNode(virtualScreenNode)
         sceneView.scene.rootNode.addChildNode(virtualPhoneNode)
         
-        // Set up Video
-        videoPlayer.playerVars = [
-            "playsinline": "1",
-            "controls": "0",
-            "showinfo": "0"
-            ] as YouTubePlayerView.YouTubePlayerParameters
-        videoPlayer.loadVideoID("ozUzomVQsWc")
-        
         // Set up gazeTracking
         gazeTracker.setHomography(homography: homography)
+        
+        // Set up web view
+        webView.navigationDelegate = self
+        let url = URL(string: "https://www.allrecipes.com/")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,11 +119,27 @@ class VideoController: UIViewController, ARSCNViewDelegate {
         let timeoutPassed = timeDelta > gazeTimeout
         if !sameAction && timeoutPassed {
             if touchedSpeechView {
-                videoPlayer.pause()
                 speechCommandView.handleStartSpeech()
             } else {
                 speechCommandView.handleEndSpeech()
             }
+        }
+        
+        // Check scroll
+        if !touchedSpeechView && scrollEnabled && squaredScreenDist <= allowedOffScreenDistSquared {
+            let relativeGaze = view.convert(boundedAdjustedGaze, to: webView)
+            var yAdjustment: CGFloat = 0
+            let maxYThresh = webView.frame.height - scrollAreaSize
+            if relativeGaze.y <= scrollAreaSize {
+                let multiplier = CGFloat.minimum((scrollAreaSize - relativeGaze.y) / scrollAreaSize, 1)
+                yAdjustment = -maxScrollSpeed * multiplier
+            } else if relativeGaze.y >= maxYThresh {
+                let multiplier = (relativeGaze.y - maxYThresh) / scrollAreaSize
+                yAdjustment = maxScrollSpeed * multiplier
+            }
+            let oldOffset = webView.scrollView.contentOffset
+            let newYVal = CGFloat.maximum(0, oldOffset.y + yAdjustment)
+            webView.scrollView.contentOffset = CGPoint(x: oldOffset.x, y: newYVal)
         }
         
         // Update last relevant gaze

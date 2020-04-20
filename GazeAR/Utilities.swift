@@ -10,6 +10,13 @@ import Foundation
 import ARKit
 import CoreGraphics
 
+let allowedOffScreenDistSquared = CGFloat(2500)
+let nearingSpeechViewDist = CGFloat(150)
+let speechIconSizeDisabled : CGFloat = 50
+let speechIconSizeEnabled : CGFloat = 400
+let gazeTimeout: Double = 0.7
+let speechTimeout: Double = 3
+
 class Constants {
     static let iPadPointSize = simd_float2(1668/2, 2388/2)
     static let iPadMeterSize = simd_float2(0.16048181818181817, 0.22975454545454543)

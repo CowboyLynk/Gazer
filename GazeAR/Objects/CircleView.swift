@@ -12,6 +12,8 @@ import UIKit
 class CircleView: UIView {
     var circleLayer: CAShapeLayer!
     let borderWidth: CGFloat = 5
+    
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,5 +49,17 @@ class CircleView: UIView {
     
     func updateCircle(progress: CGFloat) {
         circleLayer.strokeEnd = progress
+    }
+    
+    func resetColor() {
+        circleLayer.strokeColor = UIColor.systemBlue.cgColor
+    }
+    
+    func recognizedCommand() {
+        circleLayer.strokeColor = UIColor.systemGreen.cgColor
+    }
+    
+    func unrecognizedCommand() {
+        circleLayer.strokeColor = UIColor.systemRed.cgColor
     }
 }

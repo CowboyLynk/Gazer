@@ -89,6 +89,9 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         {
             let vc = segue.destination as? VideoController
             vc?.homography = gazeTracker.homography
+        } else if segue.destination is WebController {
+            let vc = segue.destination as? WebController
+            vc?.homography = gazeTracker.homography
         }
     }
  
@@ -98,12 +101,13 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        let segueIdentifier = "doneCalibratingSegueWeb"
         if finishedCalibrating() {
-            performSegue(withIdentifier: "doneCalibratingSegue", sender: nil)
+            performSegue(withIdentifier: segueIdentifier, sender: nil)
         } else {
             let alert = UIAlertController(title: "Calibration Incomplete", message: "Are you sure you want to continue?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                self.performSegue(withIdentifier: "doneCalibratingSegue", sender: nil)
+                self.performSegue(withIdentifier: segueIdentifier, sender: nil)
             }))
             alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
             self.present(alert, animated: true)

@@ -10,7 +10,7 @@
         <!--Custom Nav Controller-->
         <scene sceneID="cx3-V2-W1f">
             <objects>
-                <navigationController id="g2H-IN-i3D" customClass="CustomNavController" customModule="GazeAR" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="g2H-IN-i3D" customClass="CustomNavController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="42e-VM-yc2">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,10 +65,58 @@
             </objects>
             <point key="canvasLocation" x="141.72661870503597" y="-558.45323741007201"/>
         </scene>
+        <!--Web Controller-->
+        <scene sceneID="REV-Sy-aeI">
+            <objects>
+                <viewController id="T1Q-ME-9sB" customClass="WebController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaw-wB-gu7">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8l-mP-qML">
+                                <rect key="frame" x="0.0" y="50" width="834" height="1062"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-Jy-xBN">
+                                <rect key="frame" x="0.0" y="50" width="834" height="1062"/>
+                            </view>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2l-Bh-541">
+                                <rect key="frame" x="614" y="892" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="leading" secondItem="aYj-LT-8T8" secondAttribute="leading" id="2Lw-nD-rCs"/>
+                            <constraint firstItem="E8l-mP-qML" firstAttribute="leading" secondItem="aYj-LT-8T8" secondAttribute="leading" id="377-kU-dLM"/>
+                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="top" secondItem="aYj-LT-8T8" secondAttribute="top" id="HWV-wR-vi5"/>
+                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="bottom" secondItem="aYj-LT-8T8" secondAttribute="bottom" id="MVr-IR-9Bq"/>
+                            <constraint firstItem="E8l-mP-qML" firstAttribute="bottom" secondItem="aYj-LT-8T8" secondAttribute="bottom" id="SW4-1D-8Fl"/>
+                            <constraint firstItem="Cpl-Jy-xBN" firstAttribute="trailing" secondItem="aYj-LT-8T8" secondAttribute="trailing" id="g8J-nb-SBe"/>
+                            <constraint firstItem="E8l-mP-qML" firstAttribute="trailing" secondItem="aYj-LT-8T8" secondAttribute="trailing" id="uoh-fy-67C"/>
+                            <constraint firstItem="E8l-mP-qML" firstAttribute="top" secondItem="aYj-LT-8T8" secondAttribute="top" id="yek-U3-T2v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aYj-LT-8T8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Bg-Ib-7mh"/>
+                    <connections>
+                        <outlet property="sceneView" destination="a2l-Bh-541" id="xvy-yZ-Eqv"/>
+                        <outlet property="visualFeedbackView" destination="Cpl-Jy-xBN" id="K8Q-oT-8kL"/>
+                        <outlet property="webView" destination="E8l-mP-qML" id="gVz-QC-2dh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWZ-Dg-2iD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887.76978417266196" y="-547.12230215827344"/>
+        </scene>
         <!--Calibrate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalibrationController" customModule="GazeAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalibrationController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +301,8 @@
                         <outlet property="gazePosX" destination="sK3-S3-QSq" id="z54-6c-vLo"/>
                         <outlet property="gazePosY" destination="2Bf-xR-xj3" id="SzB-ra-K6R"/>
                         <outlet property="sceneView" destination="26N-k3-Kq7" id="imF-qF-Rwj"/>
-                        <segue destination="hU6-t2-kem" kind="show" identifier="doneCalibratingSegue" id="Si7-PZ-3Jl"/>
+                        <segue destination="hU6-t2-kem" kind="show" identifier="doneCalibratingSegueVideo" id="Si7-PZ-3Jl"/>
+                        <segue destination="T1Q-ME-9sB" kind="show" identifier="doneCalibratingSegueWeb" id="jZo-XE-6Yd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -263,7 +312,7 @@
         <!--Video Controller-->
         <scene sceneID="3bj-0c-zTC">
             <objects>
-                <viewController id="hU6-t2-kem" customClass="VideoController" customModule="GazeAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hU6-t2-kem" customClass="VideoController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tfe-Ng-Jnk">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,77 +327,12 @@
                                     <constraint firstAttribute="height" constant="491" id="WV4-YO-jm4"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-Ai-pOe">
-                                <rect key="frame" x="20" y="70" width="50" height="50"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HlF-aY-tZM">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-i5-cUX">
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fFz-yH-87e">
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBZ-2u-lan" customClass="CircleView" customModule="GazeAR" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <integer key="value" value="25"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-vJ-ueq">
-                                            <rect key="frame" x="12" y="12" width="25" height="25"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="25" id="TFa-8s-9AE"/>
-                                                <constraint firstAttribute="height" constant="25" id="eP8-a1-Iff"/>
-                                            </constraints>
-                                        </imageView>
-                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say a command" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1S-UC-6MO">
-                                            <rect key="frame" x="57" y="8" width="169" height="34"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                    <color key="value" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="uRt-vJ-ueq" firstAttribute="leading" secondItem="HlF-aY-tZM" secondAttribute="leading" constant="12" id="OdW-zW-E3r"/>
-                                        <constraint firstItem="uRt-vJ-ueq" firstAttribute="centerY" secondItem="HlF-aY-tZM" secondAttribute="centerY" id="SPV-6H-PJ2"/>
-                                        <constraint firstItem="W1S-UC-6MO" firstAttribute="leading" secondItem="uRt-vJ-ueq" secondAttribute="leading" constant="45" id="eeG-Wm-5df"/>
-                                        <constraint firstItem="W1S-UC-6MO" firstAttribute="centerY" secondItem="uRt-vJ-ueq" secondAttribute="centerY" id="okd-qL-KdR"/>
-                                    </constraints>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Yat-JI-vKL"/>
-                                    <constraint firstAttribute="height" constant="50" id="uF3-00-jAV"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4zU-HY-8mU" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" id="0Gd-mD-HPw"/>
                             <constraint firstItem="4zU-HY-8mU" firstAttribute="bottom" secondItem="jh0-jO-v6a" secondAttribute="bottom" id="2wo-fX-naz"/>
-                            <constraint firstItem="Lco-Ai-pOe" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" constant="20" id="7Xw-nK-aCM"/>
                             <constraint firstItem="4zU-HY-8mU" firstAttribute="trailing" secondItem="jh0-jO-v6a" secondAttribute="trailing" id="Pep-mD-qVt"/>
-                            <constraint firstItem="Lco-Ai-pOe" firstAttribute="top" secondItem="jh0-jO-v6a" secondAttribute="top" constant="20" id="Udd-cY-b9T"/>
                             <constraint firstItem="VVt-6e-Zu2" firstAttribute="trailing" secondItem="jh0-jO-v6a" secondAttribute="trailing" id="V4a-NW-VHD"/>
                             <constraint firstItem="VVt-6e-Zu2" firstAttribute="leading" secondItem="jh0-jO-v6a" secondAttribute="leading" id="ipJ-UW-XGf"/>
                             <constraint firstItem="jh0-jO-v6a" firstAttribute="top" secondItem="VVt-6e-Zu2" secondAttribute="top" id="kzn-T0-Lps"/>
@@ -360,12 +344,8 @@
                         <barButtonItem key="backBarButtonItem" title="Re-calibrate" id="cYL-MN-Iys"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="circleProgressIndicator" destination="jBZ-2u-lan" id="gSf-pW-S4e"/>
                         <outlet property="sceneView" destination="4zU-HY-8mU" id="eQt-8t-Tem"/>
                         <outlet property="videoPlayer" destination="VVt-6e-Zu2" id="Fk6-9f-HWR"/>
-                        <outlet property="voiceCommandView" destination="Lco-Ai-pOe" id="9TE-7z-sIH"/>
-                        <outlet property="voiceCommandWidthConstraint" destination="Yat-JI-vKL" id="89k-n2-COg"/>
-                        <outlet property="voiceRecognitionField" destination="W1S-UC-6MO" id="kt7-Na-YXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koV-Ky-iAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -373,7 +353,4 @@
             <point key="canvasLocation" x="887.76978417266196" y="95.503597122302168"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mic.fill" catalog="system" width="108" height="128"/>
-    </resources>
 </document>
