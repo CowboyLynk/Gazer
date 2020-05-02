@@ -15,7 +15,7 @@ let nearingSpeechViewDist = CGFloat(150)
 let speechIconSizeDisabled : CGFloat = 50
 let speechIconSizeEnabled : CGFloat = 400
 let gazeTimeout: Double = 0.7
-let speechTimeout: Double = 3
+let speechTimeout: Double = 2
 
 class Constants {
     static let iPadPointSize = simd_float2(1668/2, 2388/2)

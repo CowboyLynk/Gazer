@@ -14,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="42e-VM-yc2">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jIj-Be-TJD"/>
@@ -295,13 +296,14 @@
                         <outlet property="sceneView" destination="26N-k3-Kq7" id="imF-qF-Rwj"/>
                         <segue destination="hU6-t2-kem" kind="show" identifier="doneCalibratingSegueVideo" id="Si7-PZ-3Jl"/>
                         <segue destination="T1Q-ME-9sB" kind="show" identifier="doneCalibratingSegueWeb" id="jZo-XE-6Yd"/>
+                        <segue destination="I92-d3-Q1Q" kind="show" identifier="doneCalibratingSegueCall" id="jsP-Vq-I8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.72661870503597" y="95.503597122302168"/>
         </scene>
-        <!--Video Controller-->
+        <!--Video Viewer-->
         <scene sceneID="3bj-0c-zTC">
             <objects>
                 <viewController id="hU6-t2-kem" customClass="VideoController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,8 +334,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jh0-jO-v6a"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2dN-eN-zmH">
-                        <barButtonItem key="backBarButtonItem" title="Re-calibrate" id="cYL-MN-Iys"/>
+                    <navigationItem key="navigationItem" title="Video Viewer" id="tu6-bq-6Ut">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="oLH-OU-0cH">
+                            <connections>
+                                <segue destination="QJq-lz-7a3" kind="popoverPresentation" popoverAnchorBarButtonItem="oLH-OU-0cH" id="1q0-Vq-0r0">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="sceneView" destination="4zU-HY-8mU" id="eQt-8t-Tem"/>
@@ -343,6 +351,198 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koV-Ky-iAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887.76978417266196" y="95.503597122302168"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ozq-L1-u1G">
+            <objects>
+                <viewController id="ZdV-Q4-olw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OsC-8e-zyY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="493"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-Yl-aMk">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlJ-pc-8jO">
+                                <rect key="frame" x="14" y="61" width="292" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Hrd-k3-8bS"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">"[Enable/Disable] focus(ing) mode"
+        - Enters "focus" mode         - Only hear people you look at   "Hang up"         - Ends the call</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QlJ-pc-8jO" firstAttribute="centerX" secondItem="hVe-Su-0Ya" secondAttribute="centerX" id="5oW-6F-81d"/>
+                            <constraint firstItem="QlJ-pc-8jO" firstAttribute="top" secondItem="rWK-Yl-aMk" secondAttribute="bottom" id="BGl-ZX-4X7"/>
+                            <constraint firstItem="rWK-Yl-aMk" firstAttribute="leading" secondItem="hVe-Su-0Ya" secondAttribute="leading" id="Cpx-ZX-oRP"/>
+                            <constraint firstItem="QlJ-pc-8jO" firstAttribute="leading" secondItem="hVe-Su-0Ya" secondAttribute="leading" constant="14" id="Iz5-qQ-Eqd"/>
+                            <constraint firstItem="hVe-Su-0Ya" firstAttribute="trailing" secondItem="QlJ-pc-8jO" secondAttribute="trailing" constant="14" id="OCU-uI-JEG"/>
+                            <constraint firstItem="rWK-Yl-aMk" firstAttribute="top" secondItem="hVe-Su-0Ya" secondAttribute="top" constant="27" id="SXv-oe-osg"/>
+                            <constraint firstItem="rWK-Yl-aMk" firstAttribute="trailing" secondItem="hVe-Su-0Ya" secondAttribute="trailing" id="cCR-Oz-6W6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hVe-Su-0Ya"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1BE-4F-VGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="742"/>
+        </scene>
+        <!--Video Call-->
+        <scene sceneID="qRP-Jm-cWE">
+            <objects>
+                <viewController id="I92-d3-Q1Q" customClass="VideoCallController" customModule="Gazer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6db-or-Gv2">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXK-fV-J2o" userLabel="Bottom Bar">
+                                <rect key="frame" x="0.0" y="984" width="834" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv1-mQ-r7u">
+                                        <rect key="frame" x="267" y="34" width="300" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="MI9-Q2-ed2"/>
+                                            <constraint firstAttribute="height" constant="60" id="lFh-GT-Qgd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Hang Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTouchHangUpButton:" destination="I92-d3-Q1Q" eventType="touchUpInside" id="joi-3X-AE2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kv1-mQ-r7u" firstAttribute="centerX" secondItem="gXK-fV-J2o" secondAttribute="centerX" id="Cep-px-UJa"/>
+                                    <constraint firstAttribute="height" constant="128" id="KyO-7C-clt"/>
+                                    <constraint firstItem="Kv1-mQ-r7u" firstAttribute="centerY" secondItem="gXK-fV-J2o" secondAttribute="centerY" id="fwR-oA-bmh"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fzF-9M-I69">
+                                <rect key="frame" x="0.0" y="50" width="834" height="935"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VBF-hN-drq">
+                                    <size key="itemSize" width="341" height="345"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-UN-hf4" userLabel="sceneView" customClass="ARSCNView">
+                                <rect key="frame" x="625" y="878" width="189" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gXK-fV-J2o" firstAttribute="bottom" secondItem="6db-or-Gv2" secondAttribute="bottom" id="4zh-Os-XxU"/>
+                            <constraint firstItem="fzF-9M-I69" firstAttribute="leading" secondItem="kHz-13-Eo2" secondAttribute="leading" id="9Fw-rx-g4R"/>
+                            <constraint firstItem="fzF-9M-I69" firstAttribute="trailing" secondItem="kHz-13-Eo2" secondAttribute="trailing" id="eZI-bU-Gee"/>
+                            <constraint firstItem="gXK-fV-J2o" firstAttribute="top" secondItem="fzF-9M-I69" secondAttribute="bottom" constant="-1" id="gyh-5K-qa2"/>
+                            <constraint firstItem="gXK-fV-J2o" firstAttribute="leading" secondItem="kHz-13-Eo2" secondAttribute="leading" id="inj-Rt-qlL"/>
+                            <constraint firstItem="gXK-fV-J2o" firstAttribute="trailing" secondItem="kHz-13-Eo2" secondAttribute="trailing" id="m0p-Gf-CoV"/>
+                            <constraint firstItem="fzF-9M-I69" firstAttribute="top" secondItem="kHz-13-Eo2" secondAttribute="top" id="rva-kG-xJD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kHz-13-Eo2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video Call" id="pqy-8t-KHv">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="flW-2w-FSJ">
+                            <connections>
+                                <segue destination="ZdV-Q4-olw" kind="popoverPresentation" popoverAnchorBarButtonItem="flW-2w-FSJ" id="3tA-qY-UgH">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="fzF-9M-I69" id="ma6-6i-gQZ"/>
+                        <outlet property="sceneView" destination="cOR-UN-hf4" id="3Bp-Hx-Yya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDC-rH-gVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887.76978417266196" y="741.9064748201439"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cn5-xz-tfT">
+            <objects>
+                <viewController id="QJq-lz-7a3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aY0-FA-Wem">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="493"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJx-B9-Adh">
+                                <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXR-uo-7Oh">
+                                <rect key="frame" x="14" y="61" width="292" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="XGu-9r-9LF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">"Play", "Pause"
+        - Plays/pauses the video   "Skip to [mm] minutes [ss] seconds"         - skips to mm:ss in the video</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pXR-uo-7Oh" firstAttribute="leading" secondItem="FW0-mL-2DF" secondAttribute="leading" constant="14" id="3Q0-ZB-O5m"/>
+                            <constraint firstItem="KJx-B9-Adh" firstAttribute="leading" secondItem="FW0-mL-2DF" secondAttribute="leading" id="Cpt-4k-Ws7"/>
+                            <constraint firstItem="KJx-B9-Adh" firstAttribute="trailing" secondItem="FW0-mL-2DF" secondAttribute="trailing" id="IEs-D2-Vre"/>
+                            <constraint firstItem="KJx-B9-Adh" firstAttribute="top" secondItem="FW0-mL-2DF" secondAttribute="top" constant="27" id="IXk-M1-vr1"/>
+                            <constraint firstItem="pXR-uo-7Oh" firstAttribute="top" secondItem="KJx-B9-Adh" secondAttribute="bottom" id="Jc2-P7-MXo"/>
+                            <constraint firstItem="pXR-uo-7Oh" firstAttribute="centerX" secondItem="FW0-mL-2DF" secondAttribute="centerX" id="qiY-Az-ZLB"/>
+                            <constraint firstItem="FW0-mL-2DF" firstAttribute="trailing" secondItem="pXR-uo-7Oh" secondAttribute="trailing" constant="14" id="ubA-3f-IKT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FW0-mL-2DF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LL-QY-Rmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="96"/>
         </scene>
     </scenes>
 </document>

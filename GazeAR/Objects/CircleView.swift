@@ -59,16 +59,6 @@ class CircleView: UIView {
         circleLayer.strokeColor = UIColor.systemBlue.cgColor
     }
     
-    func recognizedCommand() {
-        self.backgroundColor = UIColor.systemGreen
-        let _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.resetVisualFeedback), userInfo: nil, repeats: false)
-    }
-    
-    func unrecognizedCommand() {
-        self.backgroundColor = UIColor.systemRed
-        let _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.resetVisualFeedback), userInfo: nil, repeats: false)
-    }
-    
     @objc func resetVisualFeedback() {
         self.backgroundColor = UIColor.clear
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E69D2238377C3A8FFB919B1 /* Pods_GazeAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325A6D0216B294E39CEDEA87 /* Pods_GazeAR.framework */; };
 		8506AC7D2443B9A3008B219A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506AC7C2443B9A3008B219A /* CircleView.swift */; };
+		854BF59B2457304D0036A016 /* handleCallCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BF59A2457304D0036A016 /* handleCallCommands.swift */; };
 		8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD1F2440F4EA007DA3C7 /* Utilities.swift */; };
 		8550BD2224410072007DA3C7 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550BD2124410072007DA3C7 /* CustomNavController.swift */; };
 		856167F8244CBD8400B035C9 /* SpeechCommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856167F7244CBD8400B035C9 /* SpeechCommandView.swift */; };
@@ -26,6 +27,8 @@
 		85755EB524366D4E00F7BDD1 /* GazeARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EB424366D4E00F7BDD1 /* GazeARTests.swift */; };
 		85755EC024366D4E00F7BDD1 /* GazeARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85755EBF24366D4E00F7BDD1 /* GazeARUITests.swift */; };
 		858ACD2D243CD3850020D1A0 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 858ACD2C243CD3850020D1A0 /* OpenCVWrapper.mm */; };
+		85C37E4F2456181900841E28 /* VideoCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C37E4E2456181900841E28 /* VideoCallController.swift */; };
+		85C37E53245638F400841E28 /* VideoViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C37E52245638F400841E28 /* VideoViewCollection.swift */; };
 		85E9B2DD243CAE9A002AE366 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9B2DC243CAE9A002AE366 /* VideoController.swift */; };
 		85FEEED82436ACCD0011E50F /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEEED72436ACCD0011E50F /* Calibration.swift */; };
 		896A4D08AA43E19D702FC847 /* Pods_GazeARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9D738BCF25339FED9AFA11 /* Pods_GazeARTests.framework */; };
@@ -58,6 +61,7 @@
 		791E955318912D44CD867A34 /* Pods-GazeARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GazeARTests.debug.xcconfig"; path = "Target Support Files/Pods-GazeARTests/Pods-GazeARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8506AC7C2443B9A3008B219A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		851AD7CF243CE3960088CC48 /* GazeAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GazeAR-Bridging-Header.h"; sourceTree = "<group>"; };
+		854BF59A2457304D0036A016 /* handleCallCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handleCallCommands.swift; sourceTree = "<group>"; };
 		8550BD1F2440F4EA007DA3C7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8550BD2124410072007DA3C7 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		856167F7244CBD8400B035C9 /* SpeechCommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechCommandView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		85755EC124366D4E00F7BDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858ACD2C243CD3850020D1A0 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		858ACD2E243CD3970020D1A0 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		85C37E4E2456181900841E28 /* VideoCallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallController.swift; sourceTree = "<group>"; };
+		85C37E52245638F400841E28 /* VideoViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewCollection.swift; sourceTree = "<group>"; };
 		85E9B2DC243CAE9A002AE366 /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		85FEEED72436ACCD0011E50F /* Calibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
 		AA9D738BCF25339FED9AFA11 /* Pods_GazeARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GazeARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				85FEEED72436ACCD0011E50F /* Calibration.swift */,
+				854BF59A2457304D0036A016 /* handleCallCommands.swift */,
 				856167F9244CE21400B035C9 /* handleVideoCommands.swift */,
 				856167FD244CEBAB00B035C9 /* handleWebCommands.swift */,
 			);
@@ -212,6 +219,7 @@
 		85E9B2DE243CB188002AE366 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				85C37E4E2456181900841E28 /* VideoCallController.swift */,
 				85E9B2DC243CAE9A002AE366 /* VideoController.swift */,
 				856167FB244CE93600B035C9 /* WebController.swift */,
 				85755EA124366D4C00F7BDD1 /* CalibrationController.swift */,
@@ -226,6 +234,7 @@
 				856A7FCC24367F6900FF9BAE /* GazeTracker.swift */,
 				8506AC7C2443B9A3008B219A /* CircleView.swift */,
 				856167F7244CBD8400B035C9 /* SpeechCommandView.swift */,
+				85C37E52245638F400841E28 /* VideoViewCollection.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -481,7 +490,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C37E4F2456181900841E28 /* VideoCallController.swift in Sources */,
 				856167FC244CE93600B035C9 /* WebController.swift in Sources */,
+				85C37E53245638F400841E28 /* VideoViewCollection.swift in Sources */,
 				856167FA244CE21400B035C9 /* handleVideoCommands.swift in Sources */,
 				856167F8244CBD8400B035C9 /* SpeechCommandView.swift in Sources */,
 				85755EA224366D4C00F7BDD1 /* CalibrationController.swift in Sources */,
@@ -492,6 +503,7 @@
 				856167FE244CEBAB00B035C9 /* handleWebCommands.swift in Sources */,
 				8506AC7D2443B9A3008B219A /* CircleView.swift in Sources */,
 				85755EA024366D4C00F7BDD1 /* SceneDelegate.swift in Sources */,
+				854BF59B2457304D0036A016 /* handleCallCommands.swift in Sources */,
 				858ACD2D243CD3850020D1A0 /* OpenCVWrapper.mm in Sources */,
 				8550BD202440F4EA007DA3C7 /* Utilities.swift in Sources */,
 				856A7FCD24367F6900FF9BAE /* GazeTracker.swift in Sources */,

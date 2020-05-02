@@ -12,11 +12,11 @@ import UIKit
 extension WebController: SpeechCommandViewDelegate {
     
     func processCommand(command: String) -> Bool {
-        let lockScrollRegex = try? NSRegularExpression(pattern: "(?<scrollCommand>enable|disable|lock|unlock) ([a-z]+ )*scroll(ing)?", options: .caseInsensitive)
+        let lockScrollRegex = try? NSRegularExpression(pattern: "(?<scrollCommand>resume|start|stop|enable|disable|lock|unlock) ([a-z]+ )*scroll(ing)?", options: .caseInsensitive)
         if let match = lockScrollRegex?.firstMatch(in: command, options: [], range: NSRange(location: 0, length: command.utf16.count)) {
             let scrollCommandRange = Range(match.range(withName: "scrollCommand"), in: command)!
             let scrollCommand = command[scrollCommandRange].lowercased()
-            if scrollCommand == "enable" || scrollCommand == "unlock" {
+            if scrollCommand == "enable" || scrollCommand == "unlock" || scrollCommand == "start" || scrollCommand == "resume" {
                 enableScroll()
             } else {
                 disableScroll()
@@ -34,6 +34,7 @@ extension WebController: SpeechCommandViewDelegate {
             print(link)
             let url = URL(string: "https://" + link + "/")!
             webView.load(URLRequest(url: url))
+            return true
         }
         return false
     }

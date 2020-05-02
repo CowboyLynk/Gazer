@@ -92,6 +92,9 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
         } else if segue.destination is WebController {
             let vc = segue.destination as? WebController
             vc?.homography = gazeTracker.homography
+        } else if segue.destination is VideoCallController {
+            let vc = segue.destination as? VideoCallController
+            vc?.homography = gazeTracker.homography
         }
     }
  
@@ -101,7 +104,7 @@ class CalibrationController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        let segueIdentifier = "doneCalibratingSegueVideo"
+        let segueIdentifier = "doneCalibratingSegueCall"
         if finishedCalibrating() {
             performSegue(withIdentifier: segueIdentifier, sender: nil)
         } else {

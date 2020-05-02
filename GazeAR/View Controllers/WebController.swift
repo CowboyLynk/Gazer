@@ -183,10 +183,14 @@ class WebController: UIViewController, ARSCNViewDelegate, WKNavigationDelegate {
         
         // Use the homography to adjust the position
         let adjustedCoords = gazeTracker.getTransformedPoint(point: rawCoords)
-        let boundedAdjustedCoords = boundedCoords(coords: adjustedCoords)
+        var boundedAdjustedCoords = boundedCoords(coords: adjustedCoords)
         
         // Update the tracker and labels with the adjusted Position
         DispatchQueue.main.async(execute: {() -> Void in
+            boundedAdjustedCoords = CGPoint(
+                x: boundedAdjustedCoords.x,
+                y: CGFloat.maximum(boundedAdjustedCoords.y, self.webView.frame.origin.y)
+            )
             self.handleGaze(boundedAdjustedGaze: boundedAdjustedCoords, rawGaze: rawCoords, boundedRawGaze: boundedRawCoords)
             self.gazeTarget.center = boundedAdjustedCoords
         })

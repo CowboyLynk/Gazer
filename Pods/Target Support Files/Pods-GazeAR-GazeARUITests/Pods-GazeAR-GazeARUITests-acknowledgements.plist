@@ -14,6 +14,17 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2018 agora.io. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>AgoraRtcEngine_iOS</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>By downloading, copying, installing or using the software you agree to this license.
 If you do not agree to this license, do not download, install,
 copy or use the software.

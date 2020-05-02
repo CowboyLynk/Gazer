@@ -8,6 +8,7 @@ target 'GazeAR' do
   # Pods for GazeAR
   pod 'OpenCV'
   pod 'YouTubePlayer'
+  pod 'AgoraRtcEngine_iOS'
 
   target 'GazeARTests' do
     inherit! :search_paths

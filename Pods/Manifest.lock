@@ -1,20 +1,24 @@
 PODS:
+  - AgoraRtcEngine_iOS (3.0.0.30)
   - OpenCV (4.1.0)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
+  - AgoraRtcEngine_iOS
   - OpenCV
   - YouTubePlayer
 
 SPEC REPOS:
   trunk:
+    - AgoraRtcEngine_iOS
     - OpenCV
     - YouTubePlayer
 
 SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 5b39142beec664fa82772ff16e0b4c79c175bda0
   OpenCV: 52cd4d72ff29e2be83421477aec5447320b7fb19
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: ca15a0cfab7aea6305d9ef5b58e168433bfb8edc
+PODFILE CHECKSUM: b0fe89524ca02243d32924283f6d6156764d0eb0
 
 COCOAPODS: 1.9.1

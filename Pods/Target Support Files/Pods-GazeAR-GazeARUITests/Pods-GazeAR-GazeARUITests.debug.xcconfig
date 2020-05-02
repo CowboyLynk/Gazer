@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YouTubePlayer" "${PODS_ROOT}/OpenCV"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YouTubePlayer" "${PODS_ROOT}/AgoraRtcEngine_iOS" "${PODS_ROOT}/OpenCV"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YouTubePlayer/YouTubePlayer.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -framework "AVFoundation" -framework "AssetsLibrary" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreVideo" -framework "Foundation" -framework "QuartzCore" -framework "UIKit" -framework "YouTubePlayer" -framework "opencv2"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"resolv" -framework "AVFoundation" -framework "Accelerate" -framework "AgoraRtcKit" -framework "AssetsLibrary" -framework "AudioToolbox" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreTelephony" -framework "CoreVideo" -framework "Foundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit" -framework "VideoToolbox" -framework "YouTubePlayer" -framework "opencv2" -weak_framework "CoreML"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

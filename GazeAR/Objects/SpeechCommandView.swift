@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Speech
+import AVFoundation
 
 protocol SpeechCommandViewDelegate {
     func processCommand(command: String) -> Bool
@@ -29,6 +30,10 @@ class SpeechCommandView: UIView {
     var recognitionTask: SFSpeechRecognitionTask?
     var speechTimer: Timer?
     
+    // Speech Synthesis
+    let utterance = AVSpeechUtterance(string: "Command not recognized")
+    let synthesizer = AVSpeechSynthesizer()
+    
     // Other variables
     let delegate: SpeechCommandViewDelegate!
     var voiceCommandWidthConstraint: NSLayoutConstraint!
@@ -39,6 +44,9 @@ class SpeechCommandView: UIView {
         self.delegate = delegate
         super.init(frame: frame)
         initializeUIElements()
+        
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Samantha-compact")
+        utterance.rate = 0.55
     }
     
     required init?(coder: NSCoder) {
@@ -160,10 +168,8 @@ extension SpeechCommandView: SFSpeechRecognizerDelegate {
                 self.voiceRecognitionField.text = bestString
                 if result.isFinal {
                     let isCommandRecognized = self.delegate.processCommand(command: bestString)
-                    if isCommandRecognized {
-                        self.circleProgressIndicator.recognizedCommand()
-                    } else {
-                        self.circleProgressIndicator.unrecognizedCommand()
+                    if !isCommandRecognized {
+                        self.synthesizer.speak(self.utterance)
                     }
                 } else {
                     // reset the timer
