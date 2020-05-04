@@ -28,6 +28,7 @@ extension VideoCallController: SpeechCommandViewDelegate {
     }
     
     func changeFocus(value: Bool) {
+        unfocusedSlider.isEnabled = value
         isFocusEnabled = value
         if !isFocusEnabled {
             for case let cell as VideoCell in collectionView.visibleCells {

@@ -20,6 +20,7 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     var gazeTarget : UIView = UIView()
     var speechCommandView: SpeechCommandView!
+    @IBOutlet var unfocusedSlider: UISlider!
     
     // 3D ELEMENTS
     var virtualPhoneNode: SCNNode = SCNNode()
@@ -37,7 +38,7 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
     var gaze = Gaze(coords: CGPoint(x: Int(Constants.iPadPointSize.x)/2,
                                     y: Int(Constants.iPadPointSize.y)/2))
     var agoraKit: AgoraRtcEngineKit!
-    var data: [UIView] = [UIView(), UIView()]  // the people on the call
+    var data: [UIView] = []  // the people on the call
     var isFocusEnabled = false
     var currentFocusUid: UInt? = nil
     var lastFocusTime = Date()
@@ -46,9 +47,8 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: REMOVE
-        data[0].tag = 10
-        data[1].tag = 11
+        unfocusedSlider.value = 0
+        unfocusedSlider.isEnabled = false
         
         // Sets up speech command view
         let frame = CGRect(x: 20, y: 90, width: 50, height: 50)
@@ -231,10 +231,11 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
             if timeDelta > gazeTimeout {
                 currentFocusUid = newFocusUid
                 // Set the volume and highlighting appropriately
+                let lowVolume = Int32(unfocusedSlider.value * 100)
                 for case let cell as VideoCell in collectionView.visibleCells {
                     let isNewFocusCell = cell.uid == newFocusUid
                     cell.changeBorder(shouldHighlight: isNewFocusCell)
-                    agoraKit.adjustUserPlaybackSignalVolume(cell.uid, volume: isNewFocusCell || newFocusUid == nil ? 100 : 0)
+                    agoraKit.adjustUserPlaybackSignalVolume(cell.uid, volume: isNewFocusCell || newFocusUid == nil ? 100 : lowVolume)
                 }
             }
         }

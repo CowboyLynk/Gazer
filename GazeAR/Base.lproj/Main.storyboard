@@ -433,6 +433,17 @@
                                             <action selector="didTouchHangUpButton:" destination="I92-d3-Q1Q" eventType="touchUpInside" id="joi-3X-AE2"/>
                                         </connections>
                                     </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="y7X-Er-ZbA">
+                                        <rect key="frame" x="13" y="65" width="231" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unfocused participant volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHv-1o-03e">
+                                        <rect key="frame" x="15" y="34" width="230" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -488,6 +499,7 @@
                     <connections>
                         <outlet property="collectionView" destination="fzF-9M-I69" id="ma6-6i-gQZ"/>
                         <outlet property="sceneView" destination="cOR-UN-hf4" id="3Bp-Hx-Yya"/>
+                        <outlet property="unfocusedSlider" destination="y7X-Er-ZbA" id="snf-xa-C9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDC-rH-gVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
