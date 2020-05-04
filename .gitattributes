@@ -1,0 +1,2 @@
+Pods/AgoraRtcEngine_iOS/AgoraRtcKit.framework/AgoraRtcKit filter=lfs diff=lfs merge=lfs -text
+Pods/OpenCV/opencv2.framework/Versions/A/opencv2 filter=lfs diff=lfs merge=lfs -text
