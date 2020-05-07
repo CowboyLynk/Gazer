@@ -21,6 +21,7 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
     var gazeTarget : UIView = UIView()
     var speechCommandView: SpeechCommandView!
     @IBOutlet var unfocusedSlider: UISlider!
+    @IBOutlet var unfocusedLabel: UILabel!
     
     // 3D ELEMENTS
     var virtualPhoneNode: SCNNode = SCNNode()
@@ -69,6 +70,7 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
         gazeTarget.backgroundColor = UIColor.red
         gazeTarget.frame = CGRect.init(x: 0, y:0 ,width:25 ,height:25)
         gazeTarget.layer.cornerRadius = 12.5
+        gazeTarget.layer.opacity = 0.5;
         view.addSubview(gazeTarget)
         view.bringSubviewToFront(gazeTarget)
         
@@ -209,6 +211,10 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    @IBAction func sliderChanged(_ sender: Any) {
+        unfocusedLabel.text = "Unfocused: " + String(Int(unfocusedSlider.value * 50)) + "%"
+    }
+    
     func handleVideoFocusGaze(_ boundedAdjustedGaze: CGPoint) {
         // Find the new focus cell
         var newFocusUid: UInt? = nil
@@ -231,7 +237,7 @@ class VideoCallController: UIViewController, ARSCNViewDelegate {
             if timeDelta > gazeTimeout {
                 currentFocusUid = newFocusUid
                 // Set the volume and highlighting appropriately
-                let lowVolume = Int32(unfocusedSlider.value * 100)
+                let lowVolume = Int32(unfocusedSlider.value * 50)
                 for case let cell as VideoCell in collectionView.visibleCells {
                     let isNewFocusCell = cell.uid == newFocusUid
                     cell.changeBorder(shouldHighlight: isNewFocusCell)
